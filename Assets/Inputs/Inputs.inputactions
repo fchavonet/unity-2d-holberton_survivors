@@ -2,6 +2,45 @@
     "name": "Inputs",
     "maps": [
         {
+            "name": "InTitle",
+            "id": "0fbdf65f-6596-489b-996f-27e78da72ea2",
+            "actions": [
+                {
+                    "name": "PressStart",
+                    "type": "Button",
+                    "id": "c1b92d37-e8e1-40b2-b25b-22f2fd795ac8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c3abf22e-754a-4aeb-bfa7-bfefac19e498",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PressStart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9f71e6d7-2d20-4ab9-90af-ffd29b472b63",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PressStart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
             "name": "InGame",
             "id": "a5715487-d152-4711-8c9e-4a9bff5d5377",
             "actions": [
