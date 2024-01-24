@@ -38,6 +38,24 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Floor
+    uniqueID: 3596092605
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Knight
+    uniqueID: 3635820929
+    locked: 0
+  - name: Enemies
+    uniqueID: 4021008565
+    locked: 0
+  - name: Weapons
+    uniqueID: 969357445
+    locked: 0
+  - name: UI
+    uniqueID: 988325787
+    locked: 0
+  - name: Crossfade
+    uniqueID: 1651753799
     locked: 0
