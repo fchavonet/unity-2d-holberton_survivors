@@ -44,6 +44,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Walls Level 1
+    uniqueID: 4152920947
+    locked: 0
   - name: Player
     uniqueID: 3635820929
     locked: 0
@@ -52,6 +55,12 @@ TagManager:
     locked: 0
   - name: Weapons
     uniqueID: 969357445
+    locked: 0
+  - name: Walls Level 2
+    uniqueID: 1102558821
+    locked: 0
+  - name: Walls Level 3
+    uniqueID: 3877435617
     locked: 0
   - name: UI
     uniqueID: 988325787

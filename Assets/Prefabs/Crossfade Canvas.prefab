@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 8943903235867938085}
   - component: {fileID: 8184434940220631679}
   - component: {fileID: 1638056240105764271}
-  - component: {fileID: 8034100571922248421}
   m_Layer: 5
   m_Name: Crossfade Canvas
   m_TagString: Untagged
@@ -169,20 +168,6 @@ MonoBehaviour:
   m_DefaultActionMap: InTitle
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &8034100571922248421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 882858840030524326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7832185a81c49b45b3486f70b277aff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 8184434940220631679}
-  transitionTime: 1
 --- !u!1 &2133179209122475489
 GameObject:
   m_ObjectHideFlags: 0
