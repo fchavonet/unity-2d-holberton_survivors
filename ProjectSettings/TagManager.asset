@@ -44,7 +44,7 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Knight
+  - name: Player
     uniqueID: 3635820929
     locked: 0
   - name: Enemies
