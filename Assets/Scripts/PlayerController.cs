@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     [Space(10)]
     public Animator animator;
-    public SpriteRenderer sp;
+    public SpriteRenderer spriteRenderer;
 
     [Space(10)]
     public float speed = 3f;
@@ -29,10 +29,10 @@ public class PlayerController : MonoBehaviour
 
     private void Flip() {
         if (movement.x > 0) {
-            sp.flipX = false;
+            spriteRenderer.flipX = false;
         }
         else if (movement.x < 0) {
-            sp.flipX = true;
+            spriteRenderer.flipX = true;
         }
     }
 
