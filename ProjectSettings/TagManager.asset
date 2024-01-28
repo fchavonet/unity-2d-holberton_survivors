@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -46,6 +47,9 @@ TagManager:
     locked: 0
   - name: Walls Level 1
     uniqueID: 4152920947
+    locked: 0
+  - name: Door
+    uniqueID: 511366181
     locked: 0
   - name: Player
     uniqueID: 3635820929
