@@ -48,8 +48,11 @@ TagManager:
   - name: Walls Level 1
     uniqueID: 4152920947
     locked: 0
-  - name: Door
+  - name: Environment
     uniqueID: 511366181
+    locked: 0
+  - name: PNJ
+    uniqueID: 842991165
     locked: 0
   - name: Player
     uniqueID: 3635820929
