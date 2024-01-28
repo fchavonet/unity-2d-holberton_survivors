@@ -929,7 +929,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 988325787
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -5873,6 +5873,9 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 882858840030524326, guid: 1f1b5db43538243478efd7c740658b04, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 4907186253587966740}
+    - targetCorrespondingSourceObject: {fileID: 882858840030524326, guid: 1f1b5db43538243478efd7c740658b04, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 4907186253587966737}
   m_SourcePrefab: {fileID: 100100000, guid: 1f1b5db43538243478efd7c740658b04, type: 3}
 --- !u!1 &4907186253587966736 stripped
@@ -5899,6 +5902,36 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 8184434940220631679, guid: 1f1b5db43538243478efd7c740658b04, type: 3}
   m_PrefabInstance: {fileID: 4907186253587966735}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4907186253587966740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4907186253587966736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 9a96e2f2452d41445b373919c7ad672c, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: InTitle
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -1,14 +1,24 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class HubCrossfade : MonoBehaviour
 {
     [Space(10)]
-    public Animator animator;
+    public Animator crossfadeAnimator;
+    public Animator doorAnimator;
     [Space(10)]
     public float transitionTime = 1f;
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+
+        if (other.CompareTag("Door"))
+        {
+            NextLevelCrossfade();
+            doorAnimator.SetTrigger("Open");
+        }
+    }
 
     public void NextLevelCrossfade()
     {
@@ -17,7 +27,7 @@ public class HubCrossfade : MonoBehaviour
 
     IEnumerator loadLevel(int levelIndex)
     {
-        animator.SetTrigger("Start");
+        crossfadeAnimator.SetTrigger("Start");
 
         yield return new WaitForSeconds(transitionTime);
 
