@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class Crossfade : MonoBehaviour
+public class TitleCrossfade : MonoBehaviour
 {
     [Space(10)]
     public Animator animator;
