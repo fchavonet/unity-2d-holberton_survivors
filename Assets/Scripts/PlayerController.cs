@@ -5,16 +5,18 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    private Vector2 movement;
-    private Rigidbody2D rb;
+    [Space(10)]
+    public Animator animator;
+    public SpriteRenderer sp;
+
+    [Space(10)]
     public float speed = 3f;
-    private SpriteRenderer sp;
-    private Animator animator;
+
+    private Rigidbody2D rb;
+    private Vector2 movement;
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
-        sp = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
     }
 
     private void OnMovement(InputValue value) {
