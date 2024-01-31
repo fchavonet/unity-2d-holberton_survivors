@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
     [Space(10)]
     public Animator animator;
     public SpriteRenderer spriteRenderer;
+    public ParticleSystem rightFootParticlesDust;
+    public ParticleSystem leftFootParticlesDust;
 
     [Space(10)]
     public float speed = 3f;
@@ -36,12 +38,37 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void ManageFootParticles(bool play)
+{
+    ParticleSystem[] footParticleSystems = { rightFootParticlesDust, leftFootParticlesDust };
+
+    foreach (ParticleSystem footParticleSystem in footParticleSystems)
+    {
+        if (play)
+        {
+            if (!footParticleSystem.isPlaying)
+            {
+                footParticleSystem.Play();
+            }
+        }
+        else
+        {
+            if (footParticleSystem.isPlaying)
+            {
+                footParticleSystem.Stop();
+            }
+        }
+    }
+}
+
     private void Running() {
         if(movement.magnitude > 0) {
             animator.SetBool("isRunning", true);
+            ManageFootParticles(true);
         }
         else {
             animator.SetBool("isRunning", false);
+            ManageFootParticles(false);
         }
     }
 }
