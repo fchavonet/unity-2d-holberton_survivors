@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [Space(10)]
     public Animator animator;
     public SpriteRenderer spriteRenderer;
+    public List<ParticleSystem> footParticles;
 
     [Space(10)]
     public float speed = 3f;
@@ -44,13 +46,26 @@ public class PlayerController : MonoBehaviour
 
     private void Running()
     {
-        if (movement.magnitude > 0)
+        foreach (ParticleSystem particles in footParticles)
         {
-            animator.SetBool("isRunning", true);
-        }
-        else
-        {
-            animator.SetBool("isRunning", false);
+            if (movement.magnitude > 0)
+            {
+                animator.SetBool("isRunning", true);
+
+                if (!particles.isPlaying)
+                {
+                    particles.Play();
+                }
+            }
+            else
+            {
+                animator.SetBool("isRunning", false);
+
+                if (particles.isPlaying)
+                {
+                    particles.Stop();
+                }
+            }
         }
     }
 }
