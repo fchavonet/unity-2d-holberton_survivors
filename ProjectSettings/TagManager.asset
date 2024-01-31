@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Door
+  - Enemies
   layers:
   - Default
   - TransparentFX
@@ -54,11 +55,11 @@ TagManager:
   - name: PNJ
     uniqueID: 842991165
     locked: 0
-  - name: Player
-    uniqueID: 3635820929
-    locked: 0
   - name: Enemies
     uniqueID: 4021008565
+    locked: 0
+  - name: Player
+    uniqueID: 3635820929
     locked: 0
   - name: Weapons
     uniqueID: 969357445

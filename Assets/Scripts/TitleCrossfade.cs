@@ -7,6 +7,7 @@ public class TitleCrossfade : MonoBehaviour
 {
     [Space(10)]
     public Animator animator;
+
     [Space(10)]
     public float transitionTime = 1f;
 

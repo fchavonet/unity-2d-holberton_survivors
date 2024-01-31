@@ -13,34 +13,43 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
 
-    private void Awake() {
+    private void Awake()
+    {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void OnMovement(InputValue value) {
+    private void OnMovement(InputValue value)
+    {
         movement = value.Get<Vector2>();
     }
 
-    private void FixedUpdate() {
+    private void FixedUpdate()
+    {
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
         Flip();
         Running();
     }
 
-    private void Flip() {
-        if (movement.x > 0) {
+    private void Flip()
+    {
+        if (movement.x > 0)
+        {
             spriteRenderer.flipX = false;
         }
-        else if (movement.x < 0) {
+        else if (movement.x < 0)
+        {
             spriteRenderer.flipX = true;
         }
     }
 
-    private void Running() {
-        if(movement.magnitude > 0) {
+    private void Running()
+    {
+        if (movement.magnitude > 0)
+        {
             animator.SetBool("isRunning", true);
         }
-        else {
+        else
+        {
             animator.SetBool("isRunning", false);
         }
     }
