@@ -7,6 +7,7 @@ public class HubCrossfade : MonoBehaviour
     [Space(10)]
     public Animator crossfadeAnimator;
     public Animator doorAnimator;
+
     [Space(10)]
     public float transitionTime = 1f;
 
