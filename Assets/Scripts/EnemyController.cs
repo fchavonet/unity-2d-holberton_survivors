@@ -6,7 +6,6 @@ using UnityEngine.Rendering;
 public class EnemyController : MonoBehaviour
 {
     [Space(10)]
-    public Animator animator;
     public Rigidbody2D rb;
     public SpriteRenderer sp;
 
@@ -71,7 +70,6 @@ public class EnemyController : MonoBehaviour
     private IEnumerator ResetHitAnimation()
     {
         yield return new WaitForSeconds(0.5f);
-        animator.SetBool("isHit", false);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -80,7 +78,6 @@ public class EnemyController : MonoBehaviour
         {
             PlayerHealthController.instance.TakeDamage(damage);
 
-            animator.SetBool("isHit", true);
             StartCoroutine(ResetHitAnimation());
 
             hitCounter = hitWaitTime;
