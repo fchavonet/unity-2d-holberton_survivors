@@ -9,6 +9,8 @@ public class DamageNumber : MonoBehaviour
     public float lifetime;
     private float lifeCounter;
 
+    public float floatSpeed = 2f;
+
     void Start()
     {
         lifeCounter = lifetime;
@@ -24,6 +26,8 @@ public class DamageNumber : MonoBehaviour
                 DamageController.instance.PlaceInPool(this);
             }
         }
+
+        transform.position += Vector3.up * floatSpeed * Time.deltaTime;
     }
 
     public void Setup(int damageDisplay)

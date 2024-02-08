@@ -154,8 +154,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.75
-  m_Color: {r: 0.3372549, g: 0.04705883, b: 0.03137255, a: 1}
-  m_Intensity: 2
+  m_Color: {r: 0.39215687, g: 0, b: 0, a: 1}
+  m_Intensity: 3
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: bd0458d600000000738b88f725d47a1e3d063f32b5b8abef8139b6d88538c73965b6b741e1f81ce79ba7e83a47c37362
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 1
+  m_PointLightOuterRadius: 2
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -323,7 +323,7 @@ MonoBehaviour:
   - {x: 0.2550001, y: -0.315, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: -27132
+  m_InstanceId: 36426
   m_LocalBounds:
     m_Center: {x: 0.03000021, y: -0.09, z: 0}
     m_Extent: {x: 0.2249999, y: 0.225, z: 0}
@@ -341,7 +341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 6416749768262902483}
   sp: {fileID: 393211717942490910}
-  health: 5
+  health: 10
   moveSpeed: 2
   damage: 5
   hitWaitTime: 0.5

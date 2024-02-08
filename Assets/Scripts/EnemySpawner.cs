@@ -23,7 +23,7 @@ public class EnemySpawner : MonoBehaviour
     {
         spawnCounter = timeToSpawn;
         target = PlayerHealthController.instance.transform;
-        despawnDistance = Vector3.Distance(transform.position, maxSpawn.position) + 4f;
+        despawnDistance = Vector3.Distance(transform.position, maxSpawn.position) + 5f;
         currentWave = -1;
         GoToNextWave();
 
