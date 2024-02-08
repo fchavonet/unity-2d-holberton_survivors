@@ -135,7 +135,7 @@ MonoBehaviour:
   - {x: 0.2550001, y: -0.315, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 36074
+  m_InstanceId: 30858
   m_LocalBounds:
     m_Center: {x: 0.03000021, y: -0.09, z: 0}
     m_Extent: {x: 0.2249999, y: 0.225, z: 0}
@@ -154,8 +154,8 @@ MonoBehaviour:
   rb: {fileID: 8053689058647794849}
   sp: {fileID: 7816144065435420582}
   health: 5
-  moveSpeed: 2
-  damage: 5
+  moveSpeed: 1
+  damage: 2.5
   hitWaitTime: 0.5
   knockBackTime: 0.5
 --- !u!1 &4082060519353995332
@@ -312,8 +312,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.75
-  m_Color: {r: 0.28235295, g: 0.5921569, b: 0.37254903, a: 1}
-  m_Intensity: 2
+  m_Color: {r: 0, g: 0.39215687, b: 0, a: 1}
+  m_Intensity: 3
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: bd0458d600000000738b88f725d47a1e3d063f32b5b8abef8139b6d88538c73965b6b741e1f81ce79ba7e83a47c37362
@@ -335,7 +335,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 1
+  m_PointLightOuterRadius: 2
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1

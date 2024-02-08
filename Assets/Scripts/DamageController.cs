@@ -14,8 +14,9 @@ public class DamageController : MonoBehaviour
         instance = this;
     }
 
-    public DamageNumber numberToSpawn;
+    [Space(10)]
     public Transform numberCanvas;
+    public DamageNumber numberToSpawn;
 
     private List<DamageNumber> numberPool = new List<DamageNumber>();
 
