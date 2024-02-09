@@ -4,6 +4,7 @@ public class InfiniteGrid : MonoBehaviour
 {
     [Space(10)]
     public Transform target;
+
     [Space(10)]
     public float snap = 2f;
 

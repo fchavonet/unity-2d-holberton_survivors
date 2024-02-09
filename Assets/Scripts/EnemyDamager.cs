@@ -7,9 +7,9 @@ public class EnemyDamager : MonoBehaviour
     public float lifeTime = 3f;
     public float growSpeed = 5f;
 
-    public bool shouldKnockBack;
-
+    [Space(10)]
     public bool destroyParent;
+    public bool shouldKnockBack;
 
     private Vector3 targetSize;
 

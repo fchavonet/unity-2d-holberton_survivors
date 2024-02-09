@@ -323,7 +323,7 @@ MonoBehaviour:
   - {x: 0.2550001, y: -0.315, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 36426
+  m_InstanceId: 32342
   m_LocalBounds:
     m_Center: {x: 0.03000021, y: -0.09, z: 0}
     m_Extent: {x: 0.2249999, y: 0.225, z: 0}
@@ -339,10 +339,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6a308279b99a04419a39fe12e3f185d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 6416749768262902483}
-  sp: {fileID: 393211717942490910}
+  rigidbody2d: {fileID: 6416749768262902483}
+  spriteRenderer: {fileID: 393211717942490910}
   health: 10
   moveSpeed: 2
   damage: 5
   hitWaitTime: 0.5
   knockBackTime: 0.5
+  experienceToGive: 1

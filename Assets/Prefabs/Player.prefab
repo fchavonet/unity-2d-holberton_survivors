@@ -4984,7 +4984,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -659146367
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d5a6d4391b89b8f43b90436acf5252ec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5109,8 +5109,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8209938971467907696}
-  - component: {fileID: 1515579221477447600}
   - component: {fileID: 2899654728861928297}
+  - component: {fileID: 6337011590260223039}
   - component: {fileID: 3719065974270757592}
   - component: {fileID: 5871222305591005009}
   - component: {fileID: 2838689949295158022}
@@ -5141,33 +5141,6 @@ Transform:
   - {fileID: 3827994386893861589}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1515579221477447600
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4339086928405800546}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!61 &2899654728861928297
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5213,6 +5186,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.55, y: 0.85}
   m_EdgeRadius: 0
+--- !u!50 &6337011590260223039
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4339086928405800546}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &3719065974270757592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5270,7 +5270,7 @@ MonoBehaviour:
   - {x: 0, y: -0.23, z: 0}
   m_ShapePathHash: -708389769
   m_Mesh: {fileID: 0}
-  m_InstanceId: 35888
+  m_InstanceId: 35812
   m_LocalBounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.275, y: 0.42499924, z: 0}
@@ -5292,6 +5292,7 @@ MonoBehaviour:
   - {fileID: 8311204569839436224}
   - {fileID: 6667657857737826336}
   speed: 3
+  pickupRange: 1.5
 --- !u!1 &9212551406935328058
 GameObject:
   m_ObjectHideFlags: 0

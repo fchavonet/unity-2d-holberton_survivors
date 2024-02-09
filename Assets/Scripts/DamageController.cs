@@ -1,18 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Scripting;
 
 public class DamageController : MonoBehaviour
 {
     public static DamageController instance;
-
-    private void Awake()
-    {
-        instance = this;
-    }
 
     [Space(10)]
     public Transform numberCanvas;
@@ -20,6 +11,10 @@ public class DamageController : MonoBehaviour
 
     private List<DamageNumber> numberPool = new List<DamageNumber>();
 
+    private void Awake()
+    {
+        instance = this;
+    }
 
     public void SpawnDamage(float damageAmount, Vector3 location)
     {
@@ -37,7 +32,7 @@ public class DamageController : MonoBehaviour
     {
         DamageNumber numberToOutput = null;
 
-        if(numberPool.Count == 0)
+        if (numberPool.Count == 0)
         {
             numberToOutput = Instantiate(numberToSpawn, numberCanvas);
         }

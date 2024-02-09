@@ -6,6 +6,7 @@ public class BlinkingText : MonoBehaviour
 {
     private TextMeshProUGUI textMesh;
 
+    [Space(10)]
     public float blinkInterval = 1.0f;
 
     public void Start()
