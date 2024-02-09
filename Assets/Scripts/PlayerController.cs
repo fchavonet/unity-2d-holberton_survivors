@@ -11,16 +11,17 @@ public class PlayerController : MonoBehaviour
 
     [Space(10)]
     public float speed = 3f;
+    public float pickupRange = 1.5f;
 
     Vector3 movement;
 
     /*
-    private Rigidbody2D rb;
+    private Rigidbody2D rigidbody2d;
     private Vector2 movement;
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rigidbody2d = GetComponent<Rigidbody2D>();
     }
     */
 
@@ -34,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+        //rigidbody2d.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
 
         transform.position += movement * speed * Time.fixedDeltaTime;
         Flip();

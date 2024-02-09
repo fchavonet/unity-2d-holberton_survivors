@@ -1,13 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class EnemyController : MonoBehaviour
 {
     [Space(10)]
-    public Rigidbody2D rb;
-    public SpriteRenderer sp;
+    public Rigidbody2D rigidbody2d;
+    public SpriteRenderer spriteRenderer;
 
     [Space(10)]
     public float health = 5f;
@@ -16,12 +14,13 @@ public class EnemyController : MonoBehaviour
 
     [Space(10)]
     public float hitWaitTime = 0.5f;
-    private float hitCounter;
+    public float knockBackTime = .5f;
 
     [Space(10)]
-    public float knockBackTime = .5f;
-    private float knockBackCounter;
+    public int experienceToGive = 1;
 
+    private float hitCounter;
+    private float knockBackCounter;
     private Transform target;
 
     void Start()
@@ -46,7 +45,7 @@ public class EnemyController : MonoBehaviour
             }
         }
 
-        rb.velocity = (target.position - transform.position).normalized * moveSpeed;
+        rigidbody2d.velocity = (target.position - transform.position).normalized * moveSpeed;
         FlipTowardsPlayer();
 
         if (hitCounter > 0f)
@@ -59,11 +58,11 @@ public class EnemyController : MonoBehaviour
     {
         if (transform.position.x < target.position.x)
         {
-            sp.flipX = false;
+            spriteRenderer.flipX = false;
         }
         else if (transform.position.x > target.position.x)
         {
-            sp.flipX = true;
+            spriteRenderer.flipX = true;
         }
     }
 
@@ -91,6 +90,8 @@ public class EnemyController : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+
+            LevelController.instance.SpawnExp(transform.position, experienceToGive);
         }
 
         DamageController.instance.SpawnDamage(damageToTake, transform.position);

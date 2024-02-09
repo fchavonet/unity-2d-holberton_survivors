@@ -2,7 +2,6 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public class TitleCrossfade : MonoBehaviour
 {
     [Space(10)]

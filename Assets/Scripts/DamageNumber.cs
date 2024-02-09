@@ -1,15 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
 public class DamageNumber : MonoBehaviour
 {
+    [Space(10)]
     public TMP_Text damageText;
-    public float lifetime;
-    private float lifeCounter;
 
+    [Space(10)]
+    public float lifetime;
     public float floatSpeed = 2f;
+
+    private float lifeCounter;
 
     void Start()
     {
