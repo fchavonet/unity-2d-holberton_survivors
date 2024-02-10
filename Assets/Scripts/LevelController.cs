@@ -53,5 +53,7 @@ public class LevelController : MonoBehaviour
         {
             currentLevel = expLevels.Count - 1;
         }
+
+        PlayerController.instance.acticeWeapon.LevelUp();
     }
 }
