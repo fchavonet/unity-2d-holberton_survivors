@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+
     [Space(10)]
     public Animator animator;
     public SpriteRenderer spriteRenderer;
@@ -12,6 +14,8 @@ public class PlayerController : MonoBehaviour
     [Space(10)]
     public float speed = 3f;
     public float pickupRange = 1.5f;
+
+    public Weapon acticeWeapon;
 
     Vector3 movement;
 
@@ -24,6 +28,11 @@ public class PlayerController : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
     }
     */
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void OnMovement(InputValue value)
     {
