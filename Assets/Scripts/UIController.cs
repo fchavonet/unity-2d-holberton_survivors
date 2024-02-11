@@ -10,6 +10,10 @@ public class UIController : MonoBehaviour
     public Slider experienceLevelSlider;
     public TMP_Text experienceLevelText;
 
+    public LevelUpSelectionButton[] levelUpButton;
+
+    public GameObject levelUpPanel;
+
     private void Awake()
     {
         instance = this;
