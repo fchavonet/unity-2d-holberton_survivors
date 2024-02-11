@@ -54,6 +54,12 @@ public class LevelController : MonoBehaviour
             currentLevel = expLevels.Count - 1;
         }
 
-        PlayerController.instance.acticeWeapon.LevelUp();
+        //PlayerController.instance.acticeWeapon.LevelUp();
+
+        UIController.instance.levelUpPanel.SetActive(true);
+
+        Time.timeScale = 0f;
+
+        UIController.instance.levelUpButton[1].UpdateButtonDisplay(PlayerController.instance.acticeWeapon);
     }
 }

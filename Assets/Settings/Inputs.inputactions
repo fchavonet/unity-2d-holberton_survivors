@@ -29,6 +29,17 @@
                 },
                 {
                     "name": "",
+                    "id": "a8c126dd-85fa-42e0-893d-5e661f7e4452",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PressStart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "9f71e6d7-2d20-4ab9-90af-ffd29b472b63",
                     "path": "<Gamepad>/start",
                     "interactions": "",

@@ -5787,6 +5787,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1078122046}
+    - target: {fileID: 6410922879917194462, guid: 1f1b5db43538243478efd7c740658b04, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8131620636803718885, guid: 1f1b5db43538243478efd7c740658b04, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5897,7 +5901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4907186253587966739}
-  transitionTime: 3
+  transitionTime: 5
 --- !u!95 &4907186253587966739 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8184434940220631679, guid: 1f1b5db43538243478efd7c740658b04, type: 3}
