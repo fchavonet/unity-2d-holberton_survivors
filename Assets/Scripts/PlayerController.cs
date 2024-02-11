@@ -15,7 +15,13 @@ public class PlayerController : MonoBehaviour
     public float speed = 3f;
     public float pickupRange = 1.5f;
 
-    public Weapon acticeWeapon;
+    // public Weapon acticeWeapon;
+
+    public List<Weapon> unassignedWeapons, assignedWeapons;
+    public int maxWeapons = 3;
+
+    [HideInInspector]
+    public List<Weapon> fullyLevelledWeapons = new List<Weapon>();
 
     Vector3 movement;
 
@@ -32,6 +38,11 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         instance = this;
+    }
+
+    void Start()
+    {
+        AddWeapon(Random.Range(0, unassignedWeapons.Count));
     }
 
     private void OnMovement(InputValue value)
@@ -86,5 +97,24 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void AddWeapon(int weaponNumber)
+    {
+        if (weaponNumber < unassignedWeapons.Count)
+        {
+            assignedWeapons.Add(unassignedWeapons[weaponNumber]);
+
+            unassignedWeapons[weaponNumber].gameObject.SetActive(true);
+            unassignedWeapons.RemoveAt(weaponNumber);
+        }
+    }
+
+    public void AddWeapon(Weapon weaponToAdd)
+    {
+        weaponToAdd.gameObject.SetActive(true);
+        
+        assignedWeapons.Add(weaponToAdd);
+        unassignedWeapons.Remove(weaponToAdd);
     }
 }
