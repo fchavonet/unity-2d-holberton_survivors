@@ -73,8 +73,11 @@ TagManager:
   - name: Walls Level 3
     uniqueID: 3877435617
     locked: 0
-  - name: UI
+  - name: Numbers
     uniqueID: 988325787
+    locked: 0
+  - name: UI
+    uniqueID: 386736545
     locked: 0
   - name: Crossfade
     uniqueID: 1651753799
