@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2168860707837380856}
   - component: {fileID: 4789710429397932356}
   - component: {fileID: 7334177922606779263}
-  - component: {fileID: 7333713809690334559}
   - component: {fileID: 777887971165804648}
   m_Layer: 0
   m_Name: Slime
@@ -109,36 +108,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7333713809690334559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407668690032963012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_ComponentVersion: 1
-  m_HasRenderer: 0
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_ApplyToSortingLayers: bd0458d600000000738b88f725d47a1e3d063f32b5b8abef432f63c48139b6d88538c73965b6b741e1f81ce79ba7e83a47c37362
-  m_ShapePath:
-  - {x: -0.25080013, y: -0.43237627, z: 0}
-  - {x: -0.25080013, y: 0.31237614, z: 0}
-  - {x: 0.24919987, y: 0.31237614, z: 0}
-  - {x: 0.24919987, y: -0.43237627, z: 0}
-  m_ShapePathHash: 0
-  m_Mesh: {fileID: 0}
-  m_InstanceId: 40660
-  m_LocalBounds:
-    m_Center: {x: -0.00080013275, y: -0.060000062, z: 0}
-    m_Extent: {x: 0.25, y: 0.3723762, z: 0}
 --- !u!114 &777887971165804648
 MonoBehaviour:
   m_ObjectHideFlags: 0

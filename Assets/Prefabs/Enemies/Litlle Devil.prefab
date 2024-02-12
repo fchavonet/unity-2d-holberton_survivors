@@ -199,7 +199,6 @@ GameObject:
   - component: {fileID: 3517261421496295231}
   - component: {fileID: 6918688776581043563}
   - component: {fileID: 6416749768262902483}
-  - component: {fileID: 8490359454422130732}
   - component: {fileID: 2267993762945861257}
   m_Layer: 0
   m_Name: Litlle Devil
@@ -297,36 +296,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8490359454422130732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7774403021564267678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_ComponentVersion: 1
-  m_HasRenderer: 0
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_ApplyToSortingLayers: bd0458d600000000738b88f725d47a1e3d063f32b5b8abef8139b6d88538c73965b6b741e1f81ce79ba7e83a47c37362
-  m_ShapePath:
-  - {x: -0.1949997, y: -0.315, z: 0}
-  - {x: -0.1949997, y: 0.13499999, z: 0}
-  - {x: 0.2550001, y: 0.13499999, z: 0}
-  - {x: 0.2550001, y: -0.315, z: 0}
-  m_ShapePathHash: 0
-  m_Mesh: {fileID: 0}
-  m_InstanceId: 32342
-  m_LocalBounds:
-    m_Center: {x: 0.03000021, y: -0.09, z: 0}
-    m_Extent: {x: 0.2249999, y: 0.225, z: 0}
 --- !u!114 &2267993762945861257
 MonoBehaviour:
   m_ObjectHideFlags: 0

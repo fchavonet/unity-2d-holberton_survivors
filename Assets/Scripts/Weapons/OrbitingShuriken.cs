@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SpinWeapon : Weapon
+public class OrbitingShuriken : Weapon
 {
     [Space(10)]
     public Transform holder;
@@ -24,23 +24,22 @@ public class SpinWeapon : Weapon
     void Update()
     {
         //holder.rotation = Quaternion.Euler(0f, 0f, holder.rotation.eulerAngles.z + (rotateSpeed * Time.deltaTime));
-
         holder.rotation = Quaternion.Euler(0f, 0f, holder.rotation.eulerAngles.z + (rotateSpeed * Time.deltaTime * stats[weaponLevel].speed));
 
 
         spawnCounter -= Time.deltaTime;
-        if (spawnCounter <= 0)
+        if(spawnCounter <= 0)
         {
             spawnCounter = timeBetweenSpawn;
 
-            Instantiate(shurikenToSpawn, shurikenToSpawn.position, shurikenToSpawn.rotation, holder).gameObject.SetActive(true);
-        }
+            //Instantiate(fireballToSpawn, fireballToSpawn.position, fireballToSpawn.rotation, holder).gameObject.SetActive(true);
 
-        if (statsUpdated == true)
-        {
-            statsUpdated = false;
+            for(int i = 0; i < stats[weaponLevel].amount; i++)
+            {
+                float rot = (360f / stats[weaponLevel].amount) * i;
 
-            SetStats();
+                Instantiate(shurikenToSpawn, shurikenToSpawn.position, Quaternion.Euler(0f, 0f, rot), holder).gameObject.SetActive(true);
+            }
         }
     }
 
