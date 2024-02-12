@@ -42,7 +42,10 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        AddWeapon(Random.Range(0, unassignedWeapons.Count));
+        if (assignedWeapons.Count == 0)
+        {
+            AddWeapon(Random.Range(0, unassignedWeapons.Count));
+        }
     }
 
     private void OnMovement(InputValue value)
@@ -113,7 +116,7 @@ public class PlayerController : MonoBehaviour
     public void AddWeapon(Weapon weaponToAdd)
     {
         weaponToAdd.gameObject.SetActive(true);
-        
+
         assignedWeapons.Add(weaponToAdd);
         unassignedWeapons.Remove(weaponToAdd);
     }
