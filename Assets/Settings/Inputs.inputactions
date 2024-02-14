@@ -208,6 +208,45 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "InPause",
+            "id": "aa454137-adca-4feb-89ec-5fc628ffe9f3",
+            "actions": [
+                {
+                    "name": "PressPause",
+                    "type": "Button",
+                    "id": "c459d79f-79f9-4dfb-877f-879e92555f05",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "89cf37f0-5678-442c-97ce-bf48e4ccb759",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PressPause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "be10f7ff-562f-4da0-815d-87284f24991b",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PressPause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
