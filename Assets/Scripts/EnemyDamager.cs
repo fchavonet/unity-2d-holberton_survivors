@@ -20,6 +20,8 @@ public class EnemyDamager : MonoBehaviour
 
     private Vector3 targetSize;
 
+    public bool destroyOnImpact;
+
     void Start()
     {
         targetSize = transform.localScale;
@@ -78,6 +80,10 @@ public class EnemyDamager : MonoBehaviour
             if (collision.tag == "Enemy")
             {
                 collision.GetComponent<EnemyController>().TakeDamage(damageAmount, shouldKnockBack);
+                if(destroyOnImpact)
+                {
+                    Destroy(gameObject);
+                }
             }
         }
         else

@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 6918688776581043563}
   - component: {fileID: 6416749768262902483}
   - component: {fileID: 2267993762945861257}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Litlle Devil
   m_TagString: Enemy
   m_Icon: {fileID: 0}
