@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -18,6 +19,8 @@ public class UIController : MonoBehaviour
     public string mainMenuName;
 
     public GameObject pauseScreen;
+
+    public GameObject defaultSelectedButton;
 
     private void Awake()
     {
@@ -74,6 +77,7 @@ public class UIController : MonoBehaviour
         {
             pauseScreen.SetActive(true);
             Time.timeScale = 0f;
+            EventSystem.current.SetSelectedGameObject(defaultSelectedButton);
         }
         else
         {
@@ -81,6 +85,7 @@ public class UIController : MonoBehaviour
             if (levelUpPanel.activeSelf == false)
             {
                 Time.timeScale = 1f;
+                EventSystem.current.SetSelectedGameObject(null);
             }
         }
     }
