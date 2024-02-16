@@ -28,4 +28,8 @@ public class LevelManagement : MonoBehaviour
         }
     }
 
+    public void EndLevel()
+    {
+        
+    }
 }
