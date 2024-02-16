@@ -24,6 +24,9 @@ public class UIController : MonoBehaviour
 
     public TMP_Text timeText;
 
+    public GameObject levelEndScreen;
+    public TMP_Text endTimerText;
+
     private void Awake()
     {
         instance = this;
@@ -97,6 +100,6 @@ public class UIController : MonoBehaviour
         float minutes = Mathf.FloorToInt(time / 60f);
         float seconds = Mathf.FloorToInt(time % 60);
 
-        timeText.text = minutes + ":" + seconds.ToString("00");
+        timeText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
     }
 }
