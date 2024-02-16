@@ -22,6 +22,8 @@ public class UIController : MonoBehaviour
 
     public GameObject defaultSelectedButton;
 
+    public TMP_Text timeText;
+
     private void Awake()
     {
         instance = this;
@@ -88,5 +90,13 @@ public class UIController : MonoBehaviour
                 EventSystem.current.SetSelectedGameObject(null);
             }
         }
+    }
+
+    public void UpdateTimer(float time)
+    {
+        float minutes = Mathf.FloorToInt(time / 60f);
+        float seconds = Mathf.FloorToInt(time % 60);
+
+        timeText.text = minutes + ":" + seconds.ToString("00");
     }
 }
