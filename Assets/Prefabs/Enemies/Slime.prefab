@@ -96,7 +96,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody2d: {fileID: 7334177922606779263}
   spriteRenderer: {fileID: 8454726231844176878}
-  health: 15
+  health: 8
   moveSpeed: 0.5
   damage: 10
   hitWaitTime: 0.5
