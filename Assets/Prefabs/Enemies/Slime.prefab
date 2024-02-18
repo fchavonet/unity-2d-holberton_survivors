@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1407668690032963012}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.96, y: 1.07, z: 0}
+  m_LocalPosition: {x: 0, y: 1.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -128,6 +128,7 @@ MonoBehaviour:
   hitWaitTime: 0.5
   knockBackTime: 0.5
   experienceToGive: 1
+  coinDropRate: 0.5
 --- !u!1 &6150287044521656418
 GameObject:
   m_ObjectHideFlags: 0

@@ -39,7 +39,7 @@ public class PlayerHealthController : MonoBehaviour
         {
             gameObject.SetActive(false);
 
-            LevelTimer.instance.EndLevel();
+            LevelTimer.instance.GameOver();
             Instantiate(deathEffect, transform.position, transform.rotation);
         }
 

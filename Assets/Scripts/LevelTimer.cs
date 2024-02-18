@@ -1,15 +1,25 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class LevelTimer : MonoBehaviour
 {
     public static LevelTimer instance;
-    private bool gameActive;
-    public float timer;
 
-    public float waitToShowEndScreen = 1f;
+    [Space(10)]
+    public EnemySpawner enemySpawner;
+    public GameObject deathEffect;
+
+    [Space(10)]
+    public GameObject boss;
+
+    [Space(10)]
+    public float endTimer = 600f;
+
+    private PlayerController player;
+    private float timer;
+    private float waitToShowEndScreen = 1f;
+    private bool bossSpawned = false;
+    private bool gameActive;
 
     public void Awake()
     {
@@ -19,25 +29,32 @@ public class LevelTimer : MonoBehaviour
     void Start()
     {
         gameActive = true;
+        player = PlayerHealthController.instance.GetComponent<PlayerController>();
     }
 
     void Update()
     {
-        if(gameActive == true)
+        if (gameActive == true)
         {
             timer += Time.deltaTime;
             UIController.instance.UpdateTimer(timer);
         }
+
+        if (timer >= endTimer)
+        {
+            BossSpawn();
+            EndGame();
+        }
     }
 
-    public void EndLevel()
+    public void GameOver()
     {
         gameActive = false;
 
-        StartCoroutine(EndLevelCo());
+        StartCoroutine(GameOverCo());
     }
 
-    IEnumerator EndLevelCo()
+    IEnumerator GameOverCo()
     {
         yield return new WaitForSeconds(waitToShowEndScreen);
 
@@ -47,6 +64,40 @@ public class LevelTimer : MonoBehaviour
         float seconds = Mathf.FloorToInt(timer % 60);
 
         UIController.instance.endTimerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
-        UIController.instance.levelEndScreen.SetActive(true);
+        UIController.instance.gameOverScreen.SetActive(true);
+    }
+
+    public void BossSpawn()
+    {
+        if (!bossSpawned)
+        {
+            Instantiate(boss, new Vector3(player.transform.position.x, player.transform.position.y + 15, 0), Quaternion.identity);
+
+            bossSpawned = true;
+        }
+    }
+
+    public void EndGame()
+    {
+        GameObject bossObject = GameObject.FindGameObjectWithTag("Boss");
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        enemySpawner.StopEnemyGeneration();
+        
+        foreach (GameObject enemy in enemies)
+        {
+            Vector3 enemyPosition = enemy.transform.position;
+
+            Instantiate(deathEffect, enemyPosition, Quaternion.identity);
+
+            Destroy(enemy);
+        }
+        
+
+        if (bossObject == null)
+        {
+            gameActive = false;
+            UIController.instance.levelEndScreen.SetActive(true);
+        }
     }
 }

@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -18,6 +17,7 @@ public class EnemyController : MonoBehaviour
 
     [Space(10)]
     public int experienceToGive = 1;
+    public float coinDropRate = 0.5f;
 
     private float hitCounter;
     private float knockBackCounter;
@@ -66,18 +66,12 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    private IEnumerator ResetHitAnimation()
-    {
-        yield return new WaitForSeconds(0.5f);
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player" && hitCounter <= 0f)
         {
             PlayerHealthController.instance.TakeDamage(damage);
 
-            StartCoroutine(ResetHitAnimation());
 
             hitCounter = hitWaitTime;
         }
@@ -91,7 +85,10 @@ public class EnemyController : MonoBehaviour
         {
             Destroy(gameObject);
 
-            LevelController.instance.SpawnExp(transform.position, experienceToGive);
+            if (Random.value <= coinDropRate)
+            {
+                LevelController.instance.SpawnExp(transform.position, experienceToGive);
+            }
         }
 
         DamageController.instance.SpawnDamage(damageToTake, transform.position);

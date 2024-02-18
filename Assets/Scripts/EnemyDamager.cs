@@ -11,16 +11,15 @@ public class EnemyDamager : MonoBehaviour
     [Space(10)]
     public bool destroyParent;
     public bool shouldKnockBack;
+    public bool destroyOnImpact;
 
+    [Space(10)]
     public bool damageOverTime;
     public float timeBetweenDamage;
+
     private float damageCounter;
-
     private List<EnemyController> enemiesInRange = new List<EnemyController>();
-
     private Vector3 targetSize;
-
-    public bool destroyOnImpact;
 
     void Start()
     {
@@ -77,7 +76,7 @@ public class EnemyDamager : MonoBehaviour
     {
         if (damageOverTime == false)
         {
-            if (collision.tag == "Enemy")
+            if (collision.tag == "Enemy" || collision.tag == "Boss")
             {
                 collision.GetComponent<EnemyController>().TakeDamage(damageAmount, shouldKnockBack);
                 if(destroyOnImpact)
@@ -88,7 +87,7 @@ public class EnemyDamager : MonoBehaviour
         }
         else
         {
-            if (collision.tag == "Enemy")
+            if (collision.tag == "Enemy" || collision.tag == "Boss")
             {
                 enemiesInRange.Add(collision.GetComponent<EnemyController>());
             }
@@ -99,7 +98,7 @@ public class EnemyDamager : MonoBehaviour
     {
         if (damageOverTime == true)
         {
-            if (collision.tag == "Enemy")
+            if (collision.tag == "Enemy" || collision.tag == "Boss")
             {
                 enemiesInRange.Remove(collision.GetComponent<EnemyController>());
             }

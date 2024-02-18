@@ -24,6 +24,7 @@ public class UIController : MonoBehaviour
 
     public TMP_Text timeText;
 
+    public GameObject gameOverScreen;
     public GameObject levelEndScreen;
     public TMP_Text endTimerText;
 
