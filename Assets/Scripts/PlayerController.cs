@@ -13,7 +13,9 @@ public class PlayerController : MonoBehaviour
 
     [Space(10)]
     public float speed = 3f;
+    public float speedMultiplier = 1.1f;
     public float pickupRange = 1.5f;
+    public float pickupRangeMultiplier = 1.1f;
 
     // public Weapon acticeWeapon;
 
@@ -106,9 +108,22 @@ public class PlayerController : MonoBehaviour
     {
         if (weaponNumber < unassignedWeapons.Count)
         {
+            if (unassignedWeapons[weaponNumber].tag == "PlayerUpdate")
+            {
+                for (int i = 0; i < unassignedWeapons.Count; i++)
+                {
+                    if (i != weaponNumber && unassignedWeapons[i].tag != "PlayerUpdate")
+                    {
+                        weaponNumber = i;
+                        break;
+                    }
+                }
+            }
+
             assignedWeapons.Add(unassignedWeapons[weaponNumber]);
 
             unassignedWeapons[weaponNumber].gameObject.SetActive(true);
+
             unassignedWeapons.RemoveAt(weaponNumber);
         }
     }
@@ -119,5 +134,15 @@ public class PlayerController : MonoBehaviour
 
         assignedWeapons.Add(weaponToAdd);
         unassignedWeapons.Remove(weaponToAdd);
+    }
+
+    public void SpeedLevelUp()
+    {
+        speed *= speedMultiplier;
+    }
+
+    public void PickupRangeLevelUp()
+    {
+        pickupRange *= pickupRangeMultiplier;
     }
 }

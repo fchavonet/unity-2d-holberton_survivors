@@ -71,7 +71,7 @@ public class LevelTimer : MonoBehaviour
     {
         if (!bossSpawned)
         {
-            Instantiate(boss, new Vector3(player.transform.position.x, player.transform.position.y + 15, 0), Quaternion.identity);
+            Instantiate(boss, new Vector3(player.transform.position.x + (-30), player.transform.position.y, 0), Quaternion.identity);
 
             bossSpawned = true;
         }

@@ -26,6 +26,11 @@ public class PlayerHealthController : MonoBehaviour
         healthSlider.value = currentHealth;
     }
 
+    public void Update()
+    {
+        Regeneration();
+    }
+
     private void OnHit()
     {
         TakeDamage(10f);
@@ -44,5 +49,14 @@ public class PlayerHealthController : MonoBehaviour
         }
 
         healthSlider.value = currentHealth;
+    }
+
+    public void Regeneration()
+    {
+        if (currentHealth < maxHealth)
+        {
+            currentHealth += 1 * Time.deltaTime;
+            healthSlider.value = currentHealth;
+        }
     }
 }

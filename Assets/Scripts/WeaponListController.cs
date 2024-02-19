@@ -10,29 +10,32 @@ public class WeaponListController : MonoBehaviour
 
     void Update()
     {
+        int displayedWeaponsCount = 0;
+
         for (int i = 0; i < weaponImagesUI.Length; i++)
         {
             if (i < playerController.assignedWeapons.Count)
             {
                 Weapon weapon = playerController.assignedWeapons[i];
 
-                if (weapon.icon != null)
+                if (weapon.tag != "PlayerUpdate" && weapon.icon != null)
                 {
-                    weaponImagesUI[i].gameObject.SetActive(true);
-                    weaponImagesUI[i].sprite = weapon.icon;
+                    weaponImagesUI[displayedWeaponsCount].gameObject.SetActive(true);
+                    weaponImagesUI[displayedWeaponsCount].sprite = weapon.icon;
 
-                    if (i >= weaponImages.Count)
+                    if (displayedWeaponsCount >= weaponImages.Count)
                     {
                         weaponImages.Add(weapon.icon);
                     }
                     else
                     {
-                        weaponImages[i] = weapon.icon;
+                        weaponImages[displayedWeaponsCount] = weapon.icon;
                     }
+                    displayedWeaponsCount++;
                 }
                 else
                 {
-                    weaponImagesUI[i].gameObject.SetActive(false);
+                    weaponImagesUI[displayedWeaponsCount].gameObject.SetActive(false);
                 }
             }
             else
