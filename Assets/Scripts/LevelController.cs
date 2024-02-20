@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 using UnityEngine;
 
 public class LevelController : MonoBehaviour
@@ -13,6 +14,8 @@ public class LevelController : MonoBehaviour
     public int currentLevel = 1;
     public int levelCount = 100;
     public List<Weapon> weaponsToUpgrade;
+
+    public GameObject defaultSelectedButton;
 
     void Awake()
     {
@@ -58,6 +61,8 @@ public class LevelController : MonoBehaviour
         //PlayerController.instance.acticeWeapon.LevelUp();
 
         UIController.instance.levelUpPanel.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(defaultSelectedButton);
+
 
         Time.timeScale = 0f;
 
@@ -72,21 +77,21 @@ public class LevelController : MonoBehaviour
         List<Weapon> availableWeapons = new List<Weapon>();
         availableWeapons.AddRange(PlayerController.instance.assignedWeapons);
 
-        if(availableWeapons.Count > 0)
+        if (availableWeapons.Count > 0)
         {
             int selected = Random.Range(0, availableWeapons.Count);
             weaponsToUpgrade.Add(availableWeapons[selected]);
             availableWeapons.RemoveAt(selected);
         }
 
-        if(PlayerController.instance.assignedWeapons.Count + PlayerController.instance.fullyLevelledWeapons.Count < PlayerController.instance.maxWeapons)
-        {       
+        if (PlayerController.instance.assignedWeapons.Count + PlayerController.instance.fullyLevelledWeapons.Count < PlayerController.instance.maxWeapons)
+        {
             availableWeapons.AddRange(PlayerController.instance.unassignedWeapons);
         }
 
-        for(int i = weaponsToUpgrade.Count; i < 3; i++)
+        for (int i = weaponsToUpgrade.Count; i < 3; i++)
         {
-            if(availableWeapons.Count > 0)
+            if (availableWeapons.Count > 0)
             {
                 int selected = Random.Range(0, availableWeapons.Count);
                 weaponsToUpgrade.Add(availableWeapons[selected]);
@@ -94,14 +99,14 @@ public class LevelController : MonoBehaviour
             }
         }
 
-        for(int i = 0; i < weaponsToUpgrade.Count; i++)
+        for (int i = 0; i < weaponsToUpgrade.Count; i++)
         {
             UIController.instance.levelUpButton[i].UpdateButtonDisplay(weaponsToUpgrade[i]);
         }
 
-        for(int i = 0; i < UIController.instance.levelUpButton.Length; i++)
+        for (int i = 0; i < UIController.instance.levelUpButton.Length; i++)
         {
-            if(i < weaponsToUpgrade.Count)
+            if (i < weaponsToUpgrade.Count)
             {
                 UIController.instance.levelUpButton[i].gameObject.SetActive(true);
             }
