@@ -17,10 +17,11 @@ public class EnemySpawner : MonoBehaviour
     public int checkPerFrame;
     public List<WaveInfo> waves;
 
+    public List<GameObject> spawnedEnemies = new List<GameObject>();
+    
     private int enemyToCheck;
     private Transform target;
     private float despawnDistance;
-    private List<GameObject> spawnedEnemies = new List<GameObject>();
     private float spawnCounter;
     private int currentWave;
     private float waveCounter;
