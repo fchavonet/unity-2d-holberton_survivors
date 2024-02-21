@@ -45,6 +45,9 @@ TagManager:
   - name: Floor
     uniqueID: 3596092605
     locked: 0
+  - name: Random Tilemap
+    uniqueID: 1937647409
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

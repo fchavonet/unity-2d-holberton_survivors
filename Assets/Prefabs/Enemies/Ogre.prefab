@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 6059915362788849725}
   - component: {fileID: 7816144065435420582}
   - component: {fileID: 5302833965884666251}
+  - component: {fileID: 5019711686880126656}
   m_Layer: 0
   m_Name: Goblin Sprite
   m_TagString: Untagged
@@ -235,6 +236,36 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5019711686880126656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4082060519353995332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: bd0458d631277e7300000000738b88f725d47a1e3d063f32b5b8abef432f63c48538c7398139b6d865b6b741e1f81ce79ba7e83aa1210d1747c37362
+  m_ShapePath:
+  - {x: -0.54430205, y: -0.8578667, z: 0}
+  - {x: -0.19074315, y: 0.41788244, z: 0}
+  - {x: 0.38716477, y: 0.40216863, z: 0}
+  - {x: 0.5364451, y: -0.87358046, z: 0}
+  m_ShapePathHash: 1478238239
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 48146
+  m_LocalBounds:
+    m_Center: {x: -0.0039284825, y: -0.227849, z: 0}
+    m_Extent: {x: 0.54037356, y: 0.64573145, z: 0}
 --- !u!1 &5472509631198789658
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +318,7 @@ MonoBehaviour:
   m_Intensity: 3
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: bd0458d600000000738b88f725d47a1e3d063f32b5b8abef8139b6d88538c73965b6b741e1f81ce79ba7e83a47c37362
+  m_ApplyToSortingLayers: bd0458d600000000738b88f725d47a1e3d063f32b5b8abef8139b6d88538c73965b6b741e1f81ce79ba7e83a47c3736231277e73
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
