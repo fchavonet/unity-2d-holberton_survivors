@@ -133,7 +133,7 @@ MonoBehaviour:
   - {x: 0.24335489, y: -0.21359849, z: 0}
   m_ShapePathHash: -96733892
   m_Mesh: {fileID: 0}
-  m_InstanceId: 47936
+  m_InstanceId: 31662
   m_LocalBounds:
     m_Center: {x: 0.037194952, y: -0.044633627, z: 0}
     m_Extent: {x: 0.22103801, y: 0.16896486, z: 0}
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Intensity: 3
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: bd0458d600000000738b88f725d47a1e3d063f32b5b8abef8139b6d88538c73965b6b741e1f81ce79ba7e83a47c3736231277e73
+  m_ApplyToSortingLayers: bd0458d600000000738b88f725d47a1e3d063f32b5b8abef8139b6d88538c73965b6b741e1f81ce79ba7e83a47c3736231277e73432f63c4
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0

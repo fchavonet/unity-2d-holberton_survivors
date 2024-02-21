@@ -26,6 +26,7 @@ public class UIController : MonoBehaviour
 
     public GameObject gameOverScreen;
     public GameObject levelEndScreen;
+    public TMP_Text gameOverTimerText;
     public TMP_Text endTimerText;
 
     private void Awake()

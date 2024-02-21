@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class LevelTimer : MonoBehaviour
 {
@@ -21,9 +22,13 @@ public class LevelTimer : MonoBehaviour
     private bool bossSpawned = false;
     private bool gameActive;
 
+    public GameObject defaultGameOverSelectedButton;
+    public GameObject defaultEndGameSelectedButton;
+
     public void Awake()
     {
         instance = this;
+        Time.timeScale = 1f;
     }
 
     void Start()
@@ -63,8 +68,9 @@ public class LevelTimer : MonoBehaviour
         float minutes = Mathf.FloorToInt(timer / 60f);
         float seconds = Mathf.FloorToInt(timer % 60);
 
-        UIController.instance.endTimerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
+        UIController.instance.gameOverTimerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
         UIController.instance.gameOverScreen.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(defaultGameOverSelectedButton);
     }
 
     public void BossSpawn()
@@ -83,21 +89,37 @@ public class LevelTimer : MonoBehaviour
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
         enemySpawner.StopEnemyGeneration();
-        
+
         foreach (GameObject enemy in enemies)
         {
             Vector3 enemyPosition = enemy.transform.position;
 
-            Instantiate(deathEffect, enemyPosition, Quaternion.identity);
+            Instantiate(deathEffect, enemyPosition, transform.rotation);
 
             Destroy(enemy);
         }
-        
+
 
         if (bossObject == null)
         {
             gameActive = false;
-            UIController.instance.levelEndScreen.SetActive(true);
+            
+            StartCoroutine(GameEndCo());
         }
+    }
+
+    IEnumerator GameEndCo()
+    {
+        yield return new WaitForSeconds(waitToShowEndScreen);
+
+        Time.timeScale = 0f;
+
+        float minutes = Mathf.FloorToInt(timer / 60f);
+        float seconds = Mathf.FloorToInt(timer % 60);
+
+        UIController.instance.endTimerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
+        UIController.instance.levelEndScreen.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(defaultEndGameSelectedButton);
     }
 }
