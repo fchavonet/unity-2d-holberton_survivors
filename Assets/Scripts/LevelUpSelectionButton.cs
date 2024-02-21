@@ -54,6 +54,8 @@ public class LevelUpSelectionButton : MonoBehaviour
             }
 
             UIController.instance.levelUpPanel.SetActive(false);
+            LevelTimer.instance.gameActive = true;
+            
             Time.timeScale = 1f;
         }
     }

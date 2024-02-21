@@ -44,7 +44,10 @@ public class UIController : MonoBehaviour
 
     public void OnPressPause()
     {
+        if (LevelTimer.instance.gameActive == true)
+        {
         PauseUnpause();
+        }
     }
 
     public void UpdateExperience(int currentExperience, int levelExperience, int currentLevel)
@@ -59,6 +62,7 @@ public class UIController : MonoBehaviour
     {
         levelUpPanel.SetActive(false);
         Time.timeScale = 1f;
+        LevelTimer.instance.gameActive = true;
     }
 
     public void GoToMainMenu()

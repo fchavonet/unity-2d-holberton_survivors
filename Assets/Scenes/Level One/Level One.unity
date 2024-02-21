@@ -226,7 +226,7 @@ SpriteRenderer:
   m_Size: {x: 0.375, y: 0.8125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &15066842
@@ -925,9 +925,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 495ad681c01df0a44932b0b1d9deb3ff, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 495ad681c01df0a44932b0b1d9deb3ff, type: 3}
-    m_SelectedSprite: {fileID: 21300000, guid: 495ad681c01df0a44932b0b1d9deb3ff, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 829d63dd611f2514483d41d5672c022e, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 829d63dd611f2514483d41d5672c022e, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 829d63dd611f2514483d41d5672c022e, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -972,7 +972,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9b55d8f130f29794faaf03361cb86891, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 23d740c5a78e5f244a0da6ab8161f924, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1171,7 +1171,7 @@ MonoBehaviour:
     upgradeText: FINAL
   weaponLevel: 0
   statsUpdated: 0
-  icon: {fileID: 21300000, guid: 6c05994028f9209448e07d34c5d855e2, type: 3}
+  icon: {fileID: 21300000, guid: 7ef691adc666439449f7819da78928e6, type: 3}
   holder: {fileID: 911037533}
   shurikenToSpawn: {fileID: 1204669894}
   rotateSpeed: 120
@@ -2134,7 +2134,7 @@ MonoBehaviour:
     upgradeText: +10%
   weaponLevel: 0
   statsUpdated: 0
-  icon: {fileID: 21300000, guid: 234ea1b46c58f1749b685ab6d138ee75, type: 3}
+  icon: {fileID: 21300000, guid: 77f816661bf1cde4d864e609f008d171, type: 3}
 --- !u!1 &176614055
 GameObject:
   m_ObjectHideFlags: 0
@@ -2345,13 +2345,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats:
-  - speed: 0
-    damage: 1
-    range: 1
-    timeBetweenAttacks: 5
-    amount: 10
-    duration: 0.5
-    upgradeText: 
   - speed: 1
     damage: 2
     range: 1
@@ -2359,19 +2352,54 @@ MonoBehaviour:
     amount: 1
     duration: 0.5
     upgradeText: DAMAGE +50%
-  - speed: 2
-    damage: 2
-    range: 1.1
+  - speed: 1
+    damage: 4
+    range: 1
     timeBetweenAttacks: 5
     amount: 1
     duration: 0.5
-    upgradeText: RANGE +10%
+    upgradeText: NUMBER +50%
+  - speed: 1
+    damage: 4
+    range: 1
+    timeBetweenAttacks: 5
+    amount: 2
+    duration: 0.5
+    upgradeText: NUMBER +50%
+  - speed: 1
+    damage: 8
+    range: 1
+    timeBetweenAttacks: 5
+    amount: 4
+    duration: 0.5
+    upgradeText: SPEED +50%
+  - speed: 1
+    damage: 8
+    range: 1
+    timeBetweenAttacks: 2
+    amount: 2
+    duration: 0.5
+    upgradeText: DAMAGE +50%
+  - speed: 1
+    damage: 16
+    range: 1
+    timeBetweenAttacks: 2
+    amount: 2
+    duration: 0.5
+    upgradeText: NUMBER +50%
+  - speed: 1
+    damage: 16
+    range: 1
+    timeBetweenAttacks: 2
+    amount: 8
+    duration: 0.5
+    upgradeText: 
   weaponLevel: 0
   statsUpdated: 0
-  icon: {fileID: 21300000, guid: bfaf665666afaa241bf2e4db17e4dea8, type: 3}
+  icon: {fileID: 21300000, guid: b3edf2c9fd584244e8d03687ddc14ec0, type: 3}
   damager: {fileID: 296306223}
   projectile: {fileID: 296306222}
-  weaponRange: 3
+  weaponRange: 8
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 64
@@ -2661,9 +2689,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 495ad681c01df0a44932b0b1d9deb3ff, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 495ad681c01df0a44932b0b1d9deb3ff, type: 3}
-    m_SelectedSprite: {fileID: 21300000, guid: 495ad681c01df0a44932b0b1d9deb3ff, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 829d63dd611f2514483d41d5672c022e, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 829d63dd611f2514483d41d5672c022e, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 829d63dd611f2514483d41d5672c022e, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -2708,7 +2736,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9b55d8f130f29794faaf03361cb86891, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 23d740c5a78e5f244a0da6ab8161f924, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10128,7 +10156,7 @@ GameObject:
   - component: {fileID: 419591808}
   - component: {fileID: 419591807}
   m_Layer: 0
-  m_Name: Axe
+  m_Name: Double Axe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10259,7 +10287,7 @@ GameObject:
   - component: {fileID: 428716851}
   - component: {fileID: 428716852}
   m_Layer: 0
-  m_Name: Axe sprite
+  m_Name: Double Axe Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10404,9 +10432,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 495ad681c01df0a44932b0b1d9deb3ff, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 495ad681c01df0a44932b0b1d9deb3ff, type: 3}
-    m_SelectedSprite: {fileID: 21300000, guid: 495ad681c01df0a44932b0b1d9deb3ff, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 829d63dd611f2514483d41d5672c022e, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 829d63dd611f2514483d41d5672c022e, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 829d63dd611f2514483d41d5672c022e, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -10451,7 +10479,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9b55d8f130f29794faaf03361cb86891, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 23d740c5a78e5f244a0da6ab8161f924, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10824,7 +10852,7 @@ MonoBehaviour:
     upgradeText: Damage +3
   weaponLevel: 0
   statsUpdated: 0
-  icon: {fileID: 21300000, guid: 49392e2c9ee3e764e87d343b1be65c61, type: 3}
+  icon: {fileID: 21300000, guid: f1af839bcbde65245bd656c85091c496, type: 3}
   damager: {fileID: 219384170}
   projectile: {fileID: 219384167}
   weaponRange: 3
@@ -11153,7 +11181,7 @@ MonoBehaviour:
     upgradeText: Damage +3
   weaponLevel: 0
   statsUpdated: 0
-  icon: {fileID: -606816020, guid: 767a242ddc35aba448e6e6b6f6d64f44, type: 3}
+  icon: {fileID: 21300000, guid: 31a359d22404d724394a3d9077da376c, type: 3}
   damager: {fileID: 1632112850}
   projectile: {fileID: 1632112849}
   weaponRange: 3
@@ -11364,7 +11392,7 @@ Transform:
   m_GameObject: {fileID: 594601861}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -500, y: -500, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11772,7 +11800,8 @@ MonoBehaviour:
   enemySpawner: {fileID: 794956864}
   deathEffect: {fileID: 965518837548101591, guid: d9fbd02aea997d542a4ab20c4efdbde9, type: 3}
   boss: {fileID: 609843814393310769, guid: 22a2c7911a5164349810a9c36dc59abd, type: 3}
-  endTimer: 5
+  endTimer: 60
+  gameActive: 0
   defaultGameOverSelectedButton: {fileID: 61065509}
   defaultEndGameSelectedButton: {fileID: 240106390}
 --- !u!4 &653466449
@@ -11959,7 +11988,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 110, y: 110}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &683153254
 MonoBehaviour:
@@ -12192,7 +12221,7 @@ PrefabInstance:
     - target: {fileID: 2838689949295158022, guid: 9621761086a1e93408e2f89c9ad9c757, type: 3}
       propertyPath: unassignedWeapons.Array.data[0]
       value: 
-      objectReference: {fileID: 1530284247}
+      objectReference: {fileID: 490957379}
     - target: {fileID: 2838689949295158022, guid: 9621761086a1e93408e2f89c9ad9c757, type: 3}
       propertyPath: unassignedWeapons.Array.data[1]
       value: 
@@ -12200,7 +12229,7 @@ PrefabInstance:
     - target: {fileID: 2838689949295158022, guid: 9621761086a1e93408e2f89c9ad9c757, type: 3}
       propertyPath: unassignedWeapons.Array.data[2]
       value: 
-      objectReference: {fileID: 490957379}
+      objectReference: {fileID: 1530284247}
     - target: {fileID: 2838689949295158022, guid: 9621761086a1e93408e2f89c9ad9c757, type: 3}
       propertyPath: unassignedWeapons.Array.data[3]
       value: 
@@ -12811,6 +12840,171 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!43 &983530694
+Mesh:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 11
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 54
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 20
+    localAABB:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.275, y: 0.42499924, z: 0}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 00000100020003000100000004000100030004000500010006000500040007000500060008000500070005000800090002000a00000000000b00030001000c00020005000d00010003000e00040004000f000600090010000500060011000700070012000800080013000900
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 20
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 28
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 880
+    _typelessdata: cdcc8c3e8099d9be000000000000803f000000800000008000000080cdcc8c3e8099d9becdcc8c3e8099d9becdcc8c3e8099d93e00000000000000800000803f0000008000000080cdcc8c3e8099d93ecdcc8c3e8099d93ecdcc8c3e00000000000000000000803f000000800000008000000080cdcc8c3e8099d93ecdcc8c3e8099d9becdcc0c3e08aea7be00000000cf1314bff2d350bf0000000000000080cdcc8c3e8099d9be000000001f856bbe000000001f856bbe00000000cf1314bff1d350bf0000000000000080000000001f856bbe000000001f856bbe000000008099d93e00000000000000800000803f0000008000000080cdcc8cbe8099d93ecdcc8c3e8099d93ecdcc0cbe08aea7be00000000cf13143ff1d350bf0000008000000080000000001f856bbecdcc8cbe8099d9becdcc8cbe8099d9be00000000cf13143ff2d350bf0000008000000080cdcc8cbe8099d9becdcc8cbe8099d9becdcc8cbe0000000000000000000080bf000000800000008000000080cdcc8cbe8099d9becdcc8cbe8099d93ecdcc8cbe8099d93e00000000000080bf000000800000008000000080cdcc8cbe8099d93ecdcc8cbe8099d93ecdcc8c3e00000000000000000000803f000000800000008000000080cdcc8c3e8099d93ecdcc8c3e8099d9becdcc8c3e8099d9be00000000cf1314bff2d350bf0000000000000080cdcc8c3e8099d9becdcc8c3e8099d9becdcc8c3e8099d93e000000000000803f000000800000008000000080cdcc8c3e8099d93ecdcc8c3e8099d93e000000008099d93e00000000000000800000803f0000008000000080cdcc8cbe8099d93ecdcc8c3e8099d93ecdcc0c3e08aea7be00000000cf1314bff1d350bf0000000000000080cdcc8c3e8099d9be000000001f856bbe000000001f856bbe00000000cf13143ff1d350bf0000008000000080000000001f856bbe000000001f856bbecdcc8cbe8099d93e00000000000000800000803f0000008000000080cdcc8cbe8099d93ecdcc8cbe8099d93ecdcc0cbe08aea7be00000000cf13143ff2d350bf0000008000000080000000001f856bbecdcc8cbe8099d9becdcc8cbe8099d9be00000000000080bf000000800000008000000080cdcc8cbe8099d9becdcc8cbe8099d9becdcc8cbe0000000000000000000080bf000000800000008000000080cdcc8cbe8099d9becdcc8cbe8099d93e
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.275, y: 0.42499924, z: 0}
+  m_MeshUsageFlags: 0
+  m_CookingOptions: 30
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &993619806
 GameObject:
   m_ObjectHideFlags: 0
@@ -13094,7 +13288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 786314538}
   currentHealth: 0
-  maxHealth: 1
+  maxHealth: 100
   deathEffect: {fileID: 965518837548101591, guid: d9fbd02aea997d542a4ab20c4efdbde9, type: 3}
 --- !u!61 &1065108631
 BoxCollider2D:
@@ -13313,12 +13507,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2047959186}
   - {fileID: 490957380}
-  - {fileID: 227379763}
-  - {fileID: 118391068}
+  - {fileID: 2047959186}
   - {fileID: 1530284246}
   - {fileID: 574521072}
+  - {fileID: 227379763}
+  - {fileID: 118391068}
   - {fileID: 1147721886}
   - {fileID: 167616451}
   m_Father: {fileID: 1065108624}
@@ -13398,7 +13592,7 @@ MonoBehaviour:
     upgradeText: +10%
   weaponLevel: 0
   statsUpdated: 0
-  icon: {fileID: 21300000, guid: a4640e2c93a78cc459ba5d69729795db, type: 3}
+  icon: {fileID: 21300000, guid: 427fd18f3d1d48a489f7ebe5fb232d44, type: 3}
 --- !u!1 &1153668720
 GameObject:
   m_ObjectHideFlags: 0
@@ -13853,7 +14047,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9b55d8f130f29794faaf03361cb86891, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 23d740c5a78e5f244a0da6ab8161f924, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14049,7 +14243,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 110, y: 110}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1223542913
 MonoBehaviour:
@@ -14626,7 +14820,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 110, y: 110}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1380938183
 MonoBehaviour:
@@ -15467,7 +15661,7 @@ GameObject:
   - component: {fileID: 1530284246}
   - component: {fileID: 1530284247}
   m_Layer: 0
-  m_Name: AXES
+  m_Name: DOUBLE AXE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16837,6 +17031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemap: {fileID: 594601862}
   randomTiles:
+  - {fileID: 11400000, guid: 57d77c7c2d8cca9449badbe325736bca, type: 2}
   - {fileID: 11400000, guid: 0a06b60e3522f084ba54bf67bb75d510, type: 2}
   - {fileID: 11400000, guid: 28f5f5b8c7463374d821c36dabcc42ca, type: 2}
   width: 1000
@@ -17276,7 +17471,7 @@ MonoBehaviour:
     upgradeText: FINAL
   weaponLevel: 0
   statsUpdated: 0
-  icon: {fileID: 21300000, guid: 26324670e29ef6d4dabf0b9f63d0d665, type: 3}
+  icon: {fileID: 21300000, guid: 671622e2687e87a429986c7704844ec7, type: 3}
   damager: {fileID: 143201219}
 --- !u!1 &2060873127
 GameObject:

@@ -20,7 +20,7 @@ public class LevelTimer : MonoBehaviour
     private float timer;
     private float waitToShowEndScreen = 1f;
     private bool bossSpawned = false;
-    private bool gameActive;
+    public bool gameActive;
 
     public GameObject defaultGameOverSelectedButton;
     public GameObject defaultEndGameSelectedButton;
