@@ -6139,6 +6139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mouse Controller
       objectReference: {fileID: 0}
+    - target: {fileID: 1036080170539521278, guid: 663a2fd5ad859d543a2a2c8ba53bb318, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3104251721431452911, guid: 663a2fd5ad859d543a2a2c8ba53bb318, type: 3}
       propertyPath: cursor
       value: 

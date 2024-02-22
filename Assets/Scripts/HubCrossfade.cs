@@ -18,6 +18,7 @@ public class HubCrossfade : MonoBehaviour
         {
             NextLevelCrossfade();
             doorAnimator.SetTrigger("Open");
+            SFXManager.instance.PlaySFX(0);
         }
     }
 
