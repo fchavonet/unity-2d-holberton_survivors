@@ -40,8 +40,41 @@
                 },
                 {
                     "name": "",
+                    "id": "45327a55-ab46-4b95-9181-6921c4f67453",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PressStart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "9f71e6d7-2d20-4ab9-90af-ffd29b472b63",
                     "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PressStart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9b82f8d2-2d6b-481b-b728-ede5c58516bb",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PressStart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a314937e-feb1-4165-9abf-846783f5b3b8",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -63,15 +96,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "Hit",
-                    "type": "Button",
-                    "id": "62af3a20-b4ad-426b-89af-e7933a8cb040",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -195,17 +219,6 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "574b9d86-99a2-44c4-8ffa-0ee464c0aa33",
-                    "path": "<Keyboard>/h",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Hit",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         },
@@ -254,6 +267,45 @@
                     "processors": "",
                     "groups": "",
                     "action": "PressPause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Mouse",
+            "id": "6bc4203b-49d1-442a-b446-218cea18b444",
+            "actions": [
+                {
+                    "name": "ShowMouse",
+                    "type": "Button",
+                    "id": "7b8f0fa1-2bc0-4f76-b944-6d80153d3081",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7a79f2f8-d37a-4888-9cb0-c6eb716a4155",
+                    "path": "<Keyboard>/semicolon",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ShowMouse",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "81f0b2a3-480d-43a1-a50f-4b70209de26f",
+                    "path": "<Gamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ShowMouse",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
