@@ -84,6 +84,9 @@ TagManager:
   - name: UI
     uniqueID: 386736545
     locked: 0
+  - name: Particles
+    uniqueID: 1126355001
+    locked: 0
   - name: Crossfade
     uniqueID: 1651753799
     locked: 0
