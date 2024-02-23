@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SFXManager : MonoBehaviour
@@ -17,5 +15,10 @@ public class SFXManager : MonoBehaviour
     {
         soundEffects[sfxToPlay].Stop();
         soundEffects[sfxToPlay].Play();
+    }
+
+    public void StopSFX(int sfxToPlay)
+    {
+        soundEffects[sfxToPlay].Stop();
     }
 }
