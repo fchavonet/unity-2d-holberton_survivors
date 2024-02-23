@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
 
     // public Weapon acticeWeapon;
 
-    public List<Weapon> unassignedWeapons, assignedWeapons;
+    public List<Weapon> unassignedWeapons, assignedWeapons, listWeapons;
     public int maxWeapons = 3;
 
     [HideInInspector]
@@ -123,6 +123,7 @@ public class PlayerController : MonoBehaviour
             }
 
             assignedWeapons.Add(unassignedWeapons[weaponNumber]);
+            listWeapons.Add(unassignedWeapons[weaponNumber]);
 
             unassignedWeapons[weaponNumber].gameObject.SetActive(true);
 
@@ -135,6 +136,7 @@ public class PlayerController : MonoBehaviour
         weaponToAdd.gameObject.SetActive(true);
 
         assignedWeapons.Add(weaponToAdd);
+        listWeapons.Add(weaponToAdd);
         unassignedWeapons.Remove(weaponToAdd);
     }
 

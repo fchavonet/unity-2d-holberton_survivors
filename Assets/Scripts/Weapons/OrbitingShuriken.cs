@@ -28,6 +28,7 @@ public class OrbitingShuriken : Weapon
 
 
         spawnCounter -= Time.deltaTime;
+
         if(spawnCounter <= 0)
         {
             spawnCounter = timeBetweenSpawn;
@@ -41,6 +42,13 @@ public class OrbitingShuriken : Weapon
                 Instantiate(shurikenToSpawn, shurikenToSpawn.position, Quaternion.Euler(0f, 0f, rot), holder).gameObject.SetActive(true);
             }
         }
+
+        if(statsUpdated == true)
+        {
+            statsUpdated = false;
+
+            SetStats();
+        }
     }
 
     public void SetStats()
@@ -52,7 +60,5 @@ public class OrbitingShuriken : Weapon
         timeBetweenSpawn = stats[weaponLevel].timeBetweenAttacks;
 
         damager.lifeTime = stats[weaponLevel].duration;
-
-        spawnCounter = 0f;
     }
 }

@@ -4984,7 +4984,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -659146367
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d5a6d4391b89b8f43b90436acf5252ec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5070,7 +5070,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: bd0458d6
+  m_ApplyToSortingLayers: bd0458d631277e73
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -5270,7 +5270,7 @@ MonoBehaviour:
   - {x: 0, y: -0.23, z: 0}
   m_ShapePathHash: -708389769
   m_Mesh: {fileID: 0}
-  m_InstanceId: 35812
+  m_InstanceId: 66878
   m_LocalBounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.275, y: 0.42499924, z: 0}
@@ -5292,7 +5292,13 @@ MonoBehaviour:
   - {fileID: 8311204569839436224}
   - {fileID: 6667657857737826336}
   speed: 3
+  speedMultiplier: 1.1
   pickupRange: 1.5
+  pickupRangeMultiplier: 1.1
+  unassignedWeapons: []
+  assignedWeapons: []
+  maxWeapons: 3
+  fullyLevelledWeapons: []
 --- !u!1 &9212551406935328058
 GameObject:
   m_ObjectHideFlags: 0

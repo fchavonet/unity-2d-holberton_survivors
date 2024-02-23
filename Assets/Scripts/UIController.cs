@@ -46,7 +46,7 @@ public class UIController : MonoBehaviour
     {
         if (LevelTimer.instance.gameActive == true)
         {
-        PauseUnpause();
+            PauseUnpause();
         }
     }
 

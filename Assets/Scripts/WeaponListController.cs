@@ -14,9 +14,9 @@ public class WeaponListController : MonoBehaviour
 
         for (int i = 0; i < weaponImagesUI.Length; i++)
         {
-            if (i < playerController.assignedWeapons.Count)
+            if (i < playerController.listWeapons.Count)
             {
-                Weapon weapon = playerController.assignedWeapons[i];
+                Weapon weapon = playerController.listWeapons[i];
 
                 if (weapon.tag != "PlayerUpdate" && weapon.icon != null)
                 {
