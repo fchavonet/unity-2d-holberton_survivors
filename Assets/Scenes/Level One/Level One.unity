@@ -1275,28 +1275,28 @@ MonoBehaviour:
     timeBetweenAttacks: 7.75
     amount: 2
     duration: 7
-    upgradeText: Speed x1.1
+    upgradeText: Damage +2
   - speed: 1.1
     damage: 7
     range: 1.2
     timeBetweenAttacks: 7.5
     amount: 3
     duration: 7
-    upgradeText: Damage +3
+    upgradeText: Damage +2
   - speed: 1.1
     damage: 10
     range: 1.3
     timeBetweenAttacks: 7.25
     amount: 4
     duration: 7
-    upgradeText: Speed x1.2
+    upgradeText: Damage +2
   - speed: 1.2
     damage: 10
     range: 1.4
     timeBetweenAttacks: 7
     amount: 5
     duration: 6.9
-    upgradeText: FINAL
+    upgradeText: Damage +2
   weaponLevel: 0
   statsUpdated: 0
   icon: {fileID: 21300000, guid: 7ef691adc666439449f7819da78928e6, type: 3}
@@ -2294,7 +2294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickup: {fileID: 1668211308784825002, guid: a16f5e038667e934abfb228172289c73, type: 3}
   currentExperience: 1
-  expLevels: 00000000050000000a0000000f000000
+  expLevels: 0000000001000000
   currentLevel: 1
   levelCount: 80
   weaponsToUpgrade: []
@@ -2314,171 +2314,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &180370048
-Mesh:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 11
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 54
-    topology: 0
-    baseVertex: 0
-    firstVertex: 0
-    vertexCount: 20
-    localAABB:
-      m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.275, y: 0.42499924, z: 0}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_BonesAABB: []
-  m_VariableBoneCountWeights:
-    m_Data: 
-  m_MeshCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexFormat: 0
-  m_IndexBuffer: 00000100020003000100000004000100030004000500010006000500040007000500060008000500070005000800090002000a00000000000b00030001000c00020005000d00010003000e00040004000f000600090010000500060011000700070012000800080013000900
-  m_VertexData:
-    serializedVersion: 3
-    m_VertexCount: 20
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 4
-    - stream: 0
-      offset: 28
-      format: 0
-      dimension: 4
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 880
-    _typelessdata: cdcc8c3e8099d9be000000000000803f000000800000008000000080cdcc8c3e8099d9becdcc8c3e8099d9becdcc8c3e8099d93e00000000000000800000803f0000008000000080cdcc8c3e8099d93ecdcc8c3e8099d93ecdcc8c3e00000000000000000000803f000000800000008000000080cdcc8c3e8099d93ecdcc8c3e8099d9becdcc0c3e08aea7be00000000cf1314bff2d350bf0000000000000080cdcc8c3e8099d9be000000001f856bbe000000001f856bbe00000000cf1314bff1d350bf0000000000000080000000001f856bbe000000001f856bbe000000008099d93e00000000000000800000803f0000008000000080cdcc8cbe8099d93ecdcc8c3e8099d93ecdcc0cbe08aea7be00000000cf13143ff1d350bf0000008000000080000000001f856bbecdcc8cbe8099d9becdcc8cbe8099d9be00000000cf13143ff2d350bf0000008000000080cdcc8cbe8099d9becdcc8cbe8099d9becdcc8cbe0000000000000000000080bf000000800000008000000080cdcc8cbe8099d9becdcc8cbe8099d93ecdcc8cbe8099d93e00000000000080bf000000800000008000000080cdcc8cbe8099d93ecdcc8cbe8099d93ecdcc8c3e00000000000000000000803f000000800000008000000080cdcc8c3e8099d93ecdcc8c3e8099d9becdcc8c3e8099d9be00000000cf1314bff2d350bf0000000000000080cdcc8c3e8099d9becdcc8c3e8099d9becdcc8c3e8099d93e000000000000803f000000800000008000000080cdcc8c3e8099d93ecdcc8c3e8099d93e000000008099d93e00000000000000800000803f0000008000000080cdcc8cbe8099d93ecdcc8c3e8099d93ecdcc0c3e08aea7be00000000cf1314bff1d350bf0000000000000080cdcc8c3e8099d9be000000001f856bbe000000001f856bbe00000000cf13143ff1d350bf0000008000000080000000001f856bbe000000001f856bbecdcc8cbe8099d93e00000000000000800000803f0000008000000080cdcc8cbe8099d93ecdcc8cbe8099d93ecdcc0cbe08aea7be00000000cf13143ff2d350bf0000008000000080000000001f856bbecdcc8cbe8099d9becdcc8cbe8099d9be00000000000080bf000000800000008000000080cdcc8cbe8099d9becdcc8cbe8099d9becdcc8cbe0000000000000000000080bf000000800000008000000080cdcc8cbe8099d9becdcc8cbe8099d93e
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_FloatColors:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UVInfo: 0
-  m_LocalAABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0.275, y: 0.42499924, z: 0}
-  m_MeshUsageFlags: 0
-  m_CookingOptions: 30
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
-  m_MeshMetrics[0]: 1
-  m_MeshMetrics[1]: 1
-  m_MeshOptimizationFlags: 1
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!1 &194744341
 GameObject:
   m_ObjectHideFlags: 0
@@ -2709,13 +2544,34 @@ MonoBehaviour:
     damage: 16
     range: 1
     timeBetweenAttacks: 2
-    amount: 2
+    amount: 3
     duration: 0.5
     upgradeText: NUMBER +50%
   - speed: 1
     damage: 16
     range: 1
     timeBetweenAttacks: 2
+    amount: 4
+    duration: 0.5
+    upgradeText: 
+  - speed: 1
+    damage: 16
+    range: 1
+    timeBetweenAttacks: 2
+    amount: 5
+    duration: 0.5
+    upgradeText: 
+  - speed: 1
+    damage: 16
+    range: 1
+    timeBetweenAttacks: 2
+    amount: 6
+    duration: 0.5
+    upgradeText: 
+  - speed: 1
+    damage: 18
+    range: 1
+    timeBetweenAttacks: 1.5
     amount: 8
     duration: 0.5
     upgradeText: 
@@ -11261,54 +11117,89 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats:
-  - speed: 7
+  - speed: 5
+    damage: 2
+    range: 1
+    timeBetweenAttacks: 1.5
+    amount: 1
+    duration: 25
+    upgradeText: DAMAGE +50%
+  - speed: 5
+    damage: 3
+    range: 1
+    timeBetweenAttacks: 1.5
+    amount: 1
+    duration: 25
+    upgradeText: DAMAGE +50%
+  - speed: 5
     damage: 5
     range: 1
     timeBetweenAttacks: 1.5
     amount: 1
-    duration: 0.5
-    upgradeText: Damage +2
-  - speed: 7
-    damage: 7
-    range: 5
+    duration: 25
+    upgradeText: DAMAGE +50%
+  - speed: 5
+    damage: 7.5
+    range: 1
+    timeBetweenAttacks: 1.5
+    amount: 1
+    duration: 25
+    upgradeText: Amount +1
+  - speed: 5
+    damage: 7.5
+    range: 1
     timeBetweenAttacks: 1.5
     amount: 2
-    duration: 0.5
-    upgradeText: Shot Wait Time Reduced
-  - speed: 7
-    damage: 7
+    duration: 25
+    upgradeText: DAMAGE +50%
+  - speed: 5
+    damage: 12
+    range: 1
+    timeBetweenAttacks: 1.5
+    amount: 2
+    duration: 25
+    upgradeText: Amount +1
+  - speed: 5
+    damage: 12
     range: 1
     timeBetweenAttacks: 1.25
     amount: 3
-    duration: 0.5
-    upgradeText: Damage +3
-  - speed: 7
-    damage: 10
-    range: 1.5
-    timeBetweenAttacks: 1
+    duration: 25
+    upgradeText: DAMAGE +50%
+  - speed: 5
+    damage: 18
+    range: 1
+    timeBetweenAttacks: 1.25
+    amount: 3
+    duration: 25
+    upgradeText: DAMAGE +25%
+  - speed: 5
+    damage: 23
+    range: 1
+    timeBetweenAttacks: 1.25
+    amount: 3
+    duration: 25
+    upgradeText: TBA *0.85
+  - speed: 5
+    damage: 23
+    range: 1
+    timeBetweenAttacks: 1.25
+    amount: 3
+    duration: 25
+    upgradeText: FINAL FORM
+  - speed: 5
+    damage: 25
+    range: 1
+    timeBetweenAttacks: 0.5
     amount: 4
-    duration: 0.5
-    upgradeText: Bigger
-  - speed: 7
-    damage: 15
-    range: 2.5
-    timeBetweenAttacks: 0.75
-    amount: 5
-    duration: 0.5
-    upgradeText: Damage +3
-  - speed: 7
-    damage: 10
-    range: 1.5
-    timeBetweenAttacks: 1
-    amount: 4
-    duration: 0.5
-    upgradeText: Damage +3
+    duration: 25
+    upgradeText: 
   weaponLevel: 0
   statsUpdated: 0
   icon: {fileID: 21300000, guid: f1af839bcbde65245bd656c85091c496, type: 3}
   damager: {fileID: 219384170}
   projectile: {fileID: 219384167}
-  weaponRange: 3
+  weaponRange: 5
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 64
@@ -11590,54 +11481,82 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats:
-  - speed: 5
+  - speed: 3
+    damage: 2
+    range: 1
+    timeBetweenAttacks: 2.5
+    amount: 1
+    duration: 15
+    upgradeText: Shot Wait Time Reduced
+  - speed: 3
     damage: 5
     range: 1
-    timeBetweenAttacks: 1
+    timeBetweenAttacks: 2.5
     amount: 1
-    duration: 10
-    upgradeText: Damage +2
-  - speed: 7
-    damage: 7
-    range: 5
-    timeBetweenAttacks: 1.5
-    amount: 2
-    duration: 0.5
+    duration: 15
     upgradeText: Shot Wait Time Reduced
-  - speed: 7
-    damage: 7
+  - speed: 3
+    damage: 10
     range: 1
-    timeBetweenAttacks: 1.25
-    amount: 3
-    duration: 0.5
-    upgradeText: Damage +3
-  - speed: 7
-    damage: 10
-    range: 1.5
-    timeBetweenAttacks: 1
-    amount: 4
-    duration: 0.5
-    upgradeText: Bigger
-  - speed: 7
+    timeBetweenAttacks: 2.5
+    amount: 1
+    duration: 15
+    upgradeText: Shot Wait Time Reduced
+  - speed: 3
     damage: 15
-    range: 2.5
-    timeBetweenAttacks: 0.75
-    amount: 5
-    duration: 0.5
-    upgradeText: Damage +3
-  - speed: 7
-    damage: 10
-    range: 1.5
-    timeBetweenAttacks: 1
+    range: 1
+    timeBetweenAttacks: 2.5
+    amount: 1
+    duration: 15
+    upgradeText: Shot Wait Time Reduced
+  - speed: 3
+    damage: 15
+    range: 1
+    timeBetweenAttacks: 2.5
+    amount: 2
+    duration: 15
+    upgradeText: Shot Wait Time Reduced
+  - speed: 3
+    damage: 15
+    range: 1
+    timeBetweenAttacks: 2
+    amount: 2
+    duration: 15
+    upgradeText: Shot Wait Time Reduced
+  - speed: 3
+    damage: 18
+    range: 1
+    timeBetweenAttacks: 2
+    amount: 2
+    duration: 15
+    upgradeText: Shot Wait Time Reduced
+  - speed: 3
+    damage: 20
+    range: 1
+    timeBetweenAttacks: 2
+    amount: 3
+    duration: 15
+    upgradeText: Shot Wait Time Reduced
+  - speed: 3
+    damage: 20
+    range: 1
+    timeBetweenAttacks: 2
     amount: 4
-    duration: 0.5
-    upgradeText: Damage +3
+    duration: 15
+    upgradeText: Shot Wait Time Reduced
+  - speed: 3
+    damage: 20
+    range: 1
+    timeBetweenAttacks: 2
+    amount: 5
+    duration: 15
+    upgradeText: Shot Wait Time Reduced
   weaponLevel: 0
   statsUpdated: 0
   icon: {fileID: 21300000, guid: 31a359d22404d724394a3d9077da376c, type: 3}
   damager: {fileID: 1632112850}
   projectile: {fileID: 1632112849}
-  weaponRange: 3
+  weaponRange: 15
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 64
@@ -12314,7 +12233,7 @@ MonoBehaviour:
   enemySpawner: {fileID: 794956864}
   deathEffect: {fileID: 965518837548101591, guid: d9fbd02aea997d542a4ab20c4efdbde9, type: 3}
   boss: {fileID: 609843814393310769, guid: 22a2c7911a5164349810a9c36dc59abd, type: 3}
-  endTimer: 60
+  endTimer: 600
   gameActive: 0
   defaultGameOverSelectedButton: {fileID: 61065509}
   defaultEndGameSelectedButton: {fileID: 240106390}
@@ -12710,7 +12629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2838689949295158022, guid: 9621761086a1e93408e2f89c9ad9c757, type: 3}
       propertyPath: maxWeapons
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2838689949295158022, guid: 9621761086a1e93408e2f89c9ad9c757, type: 3}
       propertyPath: pickupRange
@@ -12721,12 +12640,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 118391069}
     - target: {fileID: 2838689949295158022, guid: 9621761086a1e93408e2f89c9ad9c757, type: 3}
+      propertyPath: pickupRangeMultiplier
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838689949295158022, guid: 9621761086a1e93408e2f89c9ad9c757, type: 3}
       propertyPath: assignedWeapons.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2838689949295158022, guid: 9621761086a1e93408e2f89c9ad9c757, type: 3}
       propertyPath: unassignedWeapons.Array.size
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2838689949295158022, guid: 9621761086a1e93408e2f89c9ad9c757, type: 3}
       propertyPath: assignedWeapons.Array.data[0]
@@ -12739,31 +12662,31 @@ PrefabInstance:
     - target: {fileID: 2838689949295158022, guid: 9621761086a1e93408e2f89c9ad9c757, type: 3}
       propertyPath: unassignedWeapons.Array.data[1]
       value: 
-      objectReference: {fileID: 2047959187}
+      objectReference: {fileID: 1530284247}
     - target: {fileID: 2838689949295158022, guid: 9621761086a1e93408e2f89c9ad9c757, type: 3}
       propertyPath: unassignedWeapons.Array.data[2]
       value: 
-      objectReference: {fileID: 1530284247}
+      objectReference: {fileID: 574521073}
     - target: {fileID: 2838689949295158022, guid: 9621761086a1e93408e2f89c9ad9c757, type: 3}
       propertyPath: unassignedWeapons.Array.data[3]
       value: 
-      objectReference: {fileID: 574521073}
+      objectReference: {fileID: 227379764}
     - target: {fileID: 2838689949295158022, guid: 9621761086a1e93408e2f89c9ad9c757, type: 3}
       propertyPath: unassignedWeapons.Array.data[4]
       value: 
-      objectReference: {fileID: 227379764}
+      objectReference: {fileID: 1147721887}
     - target: {fileID: 2838689949295158022, guid: 9621761086a1e93408e2f89c9ad9c757, type: 3}
       propertyPath: unassignedWeapons.Array.data[5]
       value: 
-      objectReference: {fileID: 1147721887}
+      objectReference: {fileID: 118391069}
     - target: {fileID: 2838689949295158022, guid: 9621761086a1e93408e2f89c9ad9c757, type: 3}
       propertyPath: unassignedWeapons.Array.data[6]
       value: 
-      objectReference: {fileID: 118391069}
+      objectReference: {fileID: 167616452}
     - target: {fileID: 2838689949295158022, guid: 9621761086a1e93408e2f89c9ad9c757, type: 3}
       propertyPath: unassignedWeapons.Array.data[7]
       value: 
-      objectReference: {fileID: 167616452}
+      objectReference: {fileID: 2047959187}
     - target: {fileID: 2899654728861928297, guid: 9621761086a1e93408e2f89c9ad9c757, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -12990,8 +12913,164 @@ MonoBehaviour:
   checkPerFrame: 50
   waves:
   - enemyToSpawn: {fileID: 609843814393310769, guid: 7c5430e87b019ff49a2db4fb94abccf5, type: 3}
+    waveLength: 15
+    timeBetweenSpawns: 0.5
+  - enemyToSpawn: {fileID: 609843814393310769, guid: 7c5430e87b019ff49a2db4fb94abccf5, type: 3}
+    waveLength: 14
+    timeBetweenSpawns: 0.5
+  - enemyToSpawn: {fileID: 7774403021564267678, guid: fb297a91d2289414a8af738fd05bd224, type: 3}
+    waveLength: 2
+    timeBetweenSpawns: 0.3
+  - enemyToSpawn: {fileID: 609843814393310769, guid: 7c5430e87b019ff49a2db4fb94abccf5, type: 3}
+    waveLength: 14
+    timeBetweenSpawns: 0.3
+  - enemyToSpawn: {fileID: 609843814393310769, guid: 7c5430e87b019ff49a2db4fb94abccf5, type: 3}
+    waveLength: 15
+    timeBetweenSpawns: 0.3
+  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
+    waveLength: 15
+    timeBetweenSpawns: 0.5
+  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
+    waveLength: 14
+    timeBetweenSpawns: 0.5
+  - enemyToSpawn: {fileID: 7774403021564267678, guid: fb297a91d2289414a8af738fd05bd224, type: 3}
+    waveLength: 2
+    timeBetweenSpawns: 0.13
+  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
+    waveLength: 14
+    timeBetweenSpawns: 0.5
+  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
+    waveLength: 15
+    timeBetweenSpawns: 0.5
+  - enemyToSpawn: {fileID: 1407668690032963012, guid: 2b336eceb31f59c4ea8024f47089a7eb, type: 3}
+    waveLength: 30
+    timeBetweenSpawns: 0.3
+  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
+    waveLength: 15
+    timeBetweenSpawns: 0.5
+  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
+    waveLength: 15
+    timeBetweenSpawns: 0.5
+  - enemyToSpawn: {fileID: 609843814393310769, guid: f12d48c9c5717aa4e8b9e8d44c3e0e2e, type: 3}
+    waveLength: 15
+    timeBetweenSpawns: 0.5
+  - enemyToSpawn: {fileID: 609843814393310769, guid: f12d48c9c5717aa4e8b9e8d44c3e0e2e, type: 3}
+    waveLength: 14
+    timeBetweenSpawns: 0.5
+  - enemyToSpawn: {fileID: 1407668690032963012, guid: 2b336eceb31f59c4ea8024f47089a7eb, type: 3}
+    waveLength: 2
+    timeBetweenSpawns: 0.02
+  - enemyToSpawn: {fileID: 609843814393310769, guid: f12d48c9c5717aa4e8b9e8d44c3e0e2e, type: 3}
+    waveLength: 14
+    timeBetweenSpawns: 0.5
+  - enemyToSpawn: {fileID: 609843814393310769, guid: f12d48c9c5717aa4e8b9e8d44c3e0e2e, type: 3}
+    waveLength: 15
+    timeBetweenSpawns: 0.25
+  - enemyToSpawn: {fileID: 609843814393310769, guid: 4abb1fcdc5cf0f1478cc8fd6481f8a05, type: 3}
     waveLength: 1
+    timeBetweenSpawns: 1
+  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
+    waveLength: 14
+    timeBetweenSpawns: 0.14
+  - enemyToSpawn: {fileID: 609843814393310769, guid: 7c5430e87b019ff49a2db4fb94abccf5, type: 3}
+    waveLength: 14
+    timeBetweenSpawns: 0.14
+  - enemyToSpawn: {fileID: 609843814393310769, guid: f12d48c9c5717aa4e8b9e8d44c3e0e2e, type: 3}
+    waveLength: 2
+    timeBetweenSpawns: 0.08
+  - enemyToSpawn: {fileID: 609843814393310769, guid: 7c5430e87b019ff49a2db4fb94abccf5, type: 3}
+    waveLength: 15
+    timeBetweenSpawns: 0.14
+  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
+    waveLength: 14
+    timeBetweenSpawns: 0.14
+  - enemyToSpawn: {fileID: 609843814393310769, guid: 7c5430e87b019ff49a2db4fb94abccf5, type: 3}
+    waveLength: 15
+    timeBetweenSpawns: 0.075
+  - enemyToSpawn: {fileID: 7774403021564267678, guid: fb297a91d2289414a8af738fd05bd224, type: 3}
+    waveLength: 14
+    timeBetweenSpawns: 0.28
+  - enemyToSpawn: {fileID: 1407668690032963012, guid: 2b336eceb31f59c4ea8024f47089a7eb, type: 3}
+    waveLength: 2
+    timeBetweenSpawns: 0.02
+  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
+    waveLength: 14
+    timeBetweenSpawns: 0.075
+  - enemyToSpawn: {fileID: 609843814393310769, guid: f12d48c9c5717aa4e8b9e8d44c3e0e2e, type: 3}
+    waveLength: 15
+    timeBetweenSpawns: 0.28
+  - enemyToSpawn: {fileID: 609843814393310769, guid: 594d249c5cc1e9d40a958281ff20fa4f, type: 3}
+    waveLength: 1
+    timeBetweenSpawns: 0.01
+  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
+    waveLength: 14
+    timeBetweenSpawns: 0.5
+  - enemyToSpawn: {fileID: 609843814393310769, guid: 4abb1fcdc5cf0f1478cc8fd6481f8a05, type: 3}
+    waveLength: 15
+    timeBetweenSpawns: 3
+  - enemyToSpawn: {fileID: 7774403021564267678, guid: fb297a91d2289414a8af738fd05bd224, type: 3}
+    waveLength: 15
+    timeBetweenSpawns: 0.2
+  - enemyToSpawn: {fileID: 609843814393310769, guid: 226870cf6ed92d44bb96b24d5d84c316, type: 3}
+    waveLength: 15
+    timeBetweenSpawns: 0.2
+  - enemyToSpawn: {fileID: 609843814393310769, guid: f12d48c9c5717aa4e8b9e8d44c3e0e2e, type: 3}
+    waveLength: 14
+    timeBetweenSpawns: 0.05
+  - enemyToSpawn: {fileID: 609843814393310769, guid: ccba860548012f14cb54a499ca60e22e, type: 3}
+    waveLength: 1
+    timeBetweenSpawns: 1
+  - enemyToSpawn: {fileID: 7774403021564267678, guid: fb297a91d2289414a8af738fd05bd224, type: 3}
+    waveLength: 15
+    timeBetweenSpawns: 0.05
+  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
+    waveLength: 15
     timeBetweenSpawns: 0.1
+  - enemyToSpawn: {fileID: 609843814393310769, guid: 226870cf6ed92d44bb96b24d5d84c316, type: 3}
+    waveLength: 15
+    timeBetweenSpawns: 0.01
+  - enemyToSpawn: {fileID: 609843814393310769, guid: 71fabf01128bbbd479d468270539e133, type: 3}
+    waveLength: 15
+    timeBetweenSpawns: 0.3
+  - enemyToSpawn: {fileID: 609843814393310769, guid: 226870cf6ed92d44bb96b24d5d84c316, type: 3}
+    waveLength: 14
+    timeBetweenSpawns: 0.3
+  - enemyToSpawn: {fileID: 609843814393310769, guid: 594d249c5cc1e9d40a958281ff20fa4f, type: 3}
+    waveLength: 2
+    timeBetweenSpawns: 0.0004
+  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
+    waveLength: 14
+    timeBetweenSpawns: 0.3
+  - enemyToSpawn: {fileID: 609843814393310769, guid: 71fabf01128bbbd479d468270539e133, type: 3}
+    waveLength: 15
+    timeBetweenSpawns: 0.3
+  - enemyToSpawn: {fileID: 609843814393310769, guid: 7c5430e87b019ff49a2db4fb94abccf5, type: 3}
+    waveLength: 12
+    timeBetweenSpawns: 0.06
+  - enemyToSpawn: {fileID: 7774403021564267678, guid: fb297a91d2289414a8af738fd05bd224, type: 3}
+    waveLength: 12
+    timeBetweenSpawns: 0.06
+  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
+    waveLength: 12
+    timeBetweenSpawns: 0.12
+  - enemyToSpawn: {fileID: 1407668690032963012, guid: 2b336eceb31f59c4ea8024f47089a7eb, type: 3}
+    waveLength: 12
+    timeBetweenSpawns: 0.06
+  - enemyToSpawn: {fileID: 609843814393310769, guid: f12d48c9c5717aa4e8b9e8d44c3e0e2e, type: 3}
+    waveLength: 12
+    timeBetweenSpawns: 0.12
+  - enemyToSpawn: {fileID: 609843814393310769, guid: 226870cf6ed92d44bb96b24d5d84c316, type: 3}
+    waveLength: 12
+    timeBetweenSpawns: 0.12
+  - enemyToSpawn: {fileID: 609843814393310769, guid: 594d249c5cc1e9d40a958281ff20fa4f, type: 3}
+    waveLength: 12
+    timeBetweenSpawns: 0.06
+  - enemyToSpawn: {fileID: 609843814393310769, guid: 4abb1fcdc5cf0f1478cc8fd6481f8a05, type: 3}
+    waveLength: 12
+    timeBetweenSpawns: 0.5
+  - enemyToSpawn: {fileID: 609843814393310769, guid: 71fabf01128bbbd479d468270539e133, type: 3}
+    waveLength: 1
+    timeBetweenSpawns: 0.001
   spawnedEnemies: []
 --- !u!4 &794956865
 Transform:
@@ -16235,33 +16314,75 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stats:
   - speed: 0
-    damage: 5
+    damage: 2
     range: 1
-    timeBetweenAttacks: 1.5
+    timeBetweenAttacks: 2
+    amount: 1
+    duration: 5
+    upgradeText: More Damage
+  - speed: 0
+    damage: 4
+    range: 1
+    timeBetweenAttacks: 2
+    amount: 1
+    duration: 5
+    upgradeText: More Damage
+  - speed: 0
+    damage: 6
+    range: 1
+    timeBetweenAttacks: 2
     amount: 1
     duration: 5
     upgradeText: More Damage
   - speed: 0
     damage: 10
     range: 1
-    timeBetweenAttacks: 1.5
-    amount: 2
-    duration: 1
-    upgradeText: 
+    timeBetweenAttacks: 2
+    amount: 1
+    duration: 5
+    upgradeText: More Damage
+  - speed: 0
+    damage: 12
+    range: 1
+    timeBetweenAttacks: 2
+    amount: 1
+    duration: 5
+    upgradeText: More Damage
   - speed: 0
     damage: 15
-    range: 2
-    timeBetweenAttacks: 1.25
+    range: 1
+    timeBetweenAttacks: 2
     amount: 3
-    duration: 1
-    upgradeText: 
+    duration: 5
+    upgradeText: More Damage
+  - speed: 0
+    damage: 18
+    range: 1
+    timeBetweenAttacks: 1.5
+    amount: 3
+    duration: 5
+    upgradeText: More Damage
   - speed: 0
     damage: 20
-    range: 4
-    timeBetweenAttacks: 1
+    range: 1
+    timeBetweenAttacks: 1.5
+    amount: 3
+    duration: 5
+    upgradeText: More Damage
+  - speed: 0
+    damage: 25
+    range: 1
+    timeBetweenAttacks: 1.5
+    amount: 3
+    duration: 5
+    upgradeText: More Damage
+  - speed: 0
+    damage: 30
+    range: 1
+    timeBetweenAttacks: 1.25
     amount: 4
-    duration: 3
-    upgradeText: 
+    duration: 5
+    upgradeText: More Damage
   weaponLevel: 0
   statsUpdated: 0
   icon: {fileID: 21300000, guid: fbce0717325cdc1469eb03b59397494a, type: 3}
@@ -16341,6 +16462,171 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1536246507}
   m_CullTransparentMesh: 1
+--- !u!43 &1541520534
+Mesh:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 11
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 54
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 20
+    localAABB:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.275, y: 0.42499924, z: 0}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 00000100020003000100000004000100030004000500010006000500040007000500060008000500070005000800090002000a00000000000b00030001000c00020005000d00010003000e00040004000f000600090010000500060011000700070012000800080013000900
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 20
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 28
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 880
+    _typelessdata: cdcc8c3e8099d9be000000000000803f000000800000008000000080cdcc8c3e8099d9becdcc8c3e8099d9becdcc8c3e8099d93e00000000000000800000803f0000008000000080cdcc8c3e8099d93ecdcc8c3e8099d93ecdcc8c3e00000000000000000000803f000000800000008000000080cdcc8c3e8099d93ecdcc8c3e8099d9becdcc0c3e08aea7be00000000cf1314bff2d350bf0000000000000080cdcc8c3e8099d9be000000001f856bbe000000001f856bbe00000000cf1314bff1d350bf0000000000000080000000001f856bbe000000001f856bbe000000008099d93e00000000000000800000803f0000008000000080cdcc8cbe8099d93ecdcc8c3e8099d93ecdcc0cbe08aea7be00000000cf13143ff1d350bf0000008000000080000000001f856bbecdcc8cbe8099d9becdcc8cbe8099d9be00000000cf13143ff2d350bf0000008000000080cdcc8cbe8099d9becdcc8cbe8099d9becdcc8cbe0000000000000000000080bf000000800000008000000080cdcc8cbe8099d9becdcc8cbe8099d93ecdcc8cbe8099d93e00000000000080bf000000800000008000000080cdcc8cbe8099d93ecdcc8cbe8099d93ecdcc8c3e00000000000000000000803f000000800000008000000080cdcc8c3e8099d93ecdcc8c3e8099d9becdcc8c3e8099d9be00000000cf1314bff2d350bf0000000000000080cdcc8c3e8099d9becdcc8c3e8099d9becdcc8c3e8099d93e000000000000803f000000800000008000000080cdcc8c3e8099d93ecdcc8c3e8099d93e000000008099d93e00000000000000800000803f0000008000000080cdcc8cbe8099d93ecdcc8c3e8099d93ecdcc0c3e08aea7be00000000cf1314bff1d350bf0000000000000080cdcc8c3e8099d9be000000001f856bbe000000001f856bbe00000000cf13143ff1d350bf0000008000000080000000001f856bbe000000001f856bbecdcc8cbe8099d93e00000000000000800000803f0000008000000080cdcc8cbe8099d93ecdcc8cbe8099d93ecdcc0cbe08aea7be00000000cf13143ff2d350bf0000008000000080000000001f856bbecdcc8cbe8099d9becdcc8cbe8099d9be00000000000080bf000000800000008000000080cdcc8cbe8099d9becdcc8cbe8099d9becdcc8cbe0000000000000000000080bf000000800000008000000080cdcc8cbe8099d9becdcc8cbe8099d93e
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.275, y: 0.42499924, z: 0}
+  m_MeshUsageFlags: 0
+  m_CookingOptions: 30
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &1546858418
 GameObject:
   m_ObjectHideFlags: 0
@@ -18133,28 +18419,28 @@ MonoBehaviour:
     timeBetweenAttacks: 8
     amount: 0
     duration: 7
-    upgradeText: Damage +1
+    upgradeText: DURATION  +2
   - speed: 0.5
     damage: 3
     range: 1
     timeBetweenAttacks: 8
     amount: 0
     duration: 7
-    upgradeText: Range x1.1
+    upgradeText: RANGE +50%
   - speed: 0.5
     damage: 3
     range: 1.1
     timeBetweenAttacks: 8
     amount: 0
     duration: 7
-    upgradeText: Time between damage decreased1
+    upgradeText: TBA -2
   - speed: 0.4
     damage: 3
     range: 1.1
     timeBetweenAttacks: 8
     amount: 0
     duration: 7
-    upgradeText: FINAL
+    upgradeText: RANGE +50%
   weaponLevel: 0
   statsUpdated: 0
   icon: {fileID: 21300000, guid: 671622e2687e87a429986c7704844ec7, type: 3}

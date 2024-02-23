@@ -124,7 +124,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 7816144065435420582}
   health: 2
   moveSpeed: 1
-  damage: 3
+  damage: 5
   hitWaitTime: 0.5
   knockBackTime: 0.5
   experienceToGive: 1
