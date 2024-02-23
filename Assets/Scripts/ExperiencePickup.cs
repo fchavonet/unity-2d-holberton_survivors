@@ -42,6 +42,8 @@ public class ExperiencePickup : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            SFXManager.instance.PlaySFXPitched(2);
+
             LevelController.instance.GetExp(experienValue);
 
             Destroy(gameObject);

@@ -86,6 +86,7 @@ public class UIController : MonoBehaviour
     {
         if (pauseScreen.activeSelf == false)
         {
+            SFXManager.instance.StopSFX(1);
             pauseScreen.SetActive(true);
             Time.timeScale = 0f;
             EventSystem.current.SetSelectedGameObject(defaultSelectedButton);

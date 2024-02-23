@@ -81,12 +81,15 @@ TagManager:
   - name: Numbers
     uniqueID: 988325787
     locked: 0
+  - name: Title
+    uniqueID: 1828480395
+    locked: 0
+  - name: Particles
+    uniqueID: 1126355001
+    locked: 0
   - name: Crossfade
     uniqueID: 1651753799
     locked: 0
   - name: UI
     uniqueID: 386736545
-    locked: 0
-  - name: Particles
-    uniqueID: 1126355001
     locked: 0

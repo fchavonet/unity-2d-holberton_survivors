@@ -49,6 +49,8 @@ public class LevelController : MonoBehaviour
 
     void LevelUp()
     {
+        SFXManager.instance.StopSFX(1);
+        
         currentExperience -= expLevels[currentLevel];
 
         currentLevel++;
