@@ -42,6 +42,5 @@ public class DangerZone : Weapon
 
         spawnTime = stats[weaponLevel].timeBetweenAttacks;
 
-        spawnCounter = 0f;
     }
 }
