@@ -22,6 +22,9 @@ public class UIController : MonoBehaviour
 
     public GameObject defaultSelectedButton;
 
+    public TMP_Text enemiesDefeatedCount;
+    public TMP_Text enemiesDefeatedGameOverCount;
+    public TMP_Text enemiesDefeatedGameEndCount;
     public TMP_Text timeText;
 
     public GameObject gameOverScreen;
@@ -32,6 +35,13 @@ public class UIController : MonoBehaviour
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Update()
+    {
+        enemiesDefeatedCount.text = "ENEMIES DEFEATED: " + LevelController.instance.enemiesDefeated.ToString("000000");
+        enemiesDefeatedGameOverCount.text = "ENEMIES DEFEATED: " + LevelController.instance.enemiesDefeated.ToString("000000");
+        enemiesDefeatedGameEndCount.text = "ENEMIES DEFEATED: " + LevelController.instance.enemiesDefeated.ToString("000000");
     }
 
     /*void Update()

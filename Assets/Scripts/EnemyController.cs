@@ -85,6 +85,8 @@ public class EnemyController : MonoBehaviour
         {
             Destroy(gameObject);
 
+            LevelController.instance.IncrementEnemiesDefeated();
+
             if (Random.value <= coinDropRate)
             {
                 LevelController.instance.SpawnExp(transform.position, experienceToGive);

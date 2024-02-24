@@ -8,14 +8,16 @@ public class LevelController : MonoBehaviour
 
     [Space(10)]
     public ExperiencePickup pickup;
+
     [Space(10)]
     public int currentExperience;
     public List<int> expLevels;
     public int currentLevel = 1;
     public int levelCount = 100;
     public List<Weapon> weaponsToUpgrade;
-
     public GameObject defaultSelectedButton;
+
+    public int enemiesDefeated = 0;
 
     void Awake()
     {
@@ -50,7 +52,7 @@ public class LevelController : MonoBehaviour
     void LevelUp()
     {
         SFXManager.instance.StopSFX(1);
-        
+
         currentExperience -= expLevels[currentLevel];
 
         currentLevel++;
@@ -117,5 +119,10 @@ public class LevelController : MonoBehaviour
                 UIController.instance.levelUpButton[i].gameObject.SetActive(false);
             }
         }
+    }
+
+    public void IncrementEnemiesDefeated()
+    {
+        enemiesDefeated++;
     }
 }
