@@ -6,18 +6,28 @@ public class ExperiencePickup : MonoBehaviour
     public int experienValue;
     public float moveSpeed;
     public float timeBetweenChecks = .2f;
+    public float lifeDuration = 60f;
 
     private PlayerController player;
     private bool movingToPlayer;
     private float checkCounter;
+    private float lifeTimer;
 
     void Start()
     {
         player = PlayerHealthController.instance.GetComponent<PlayerController>();
+        lifeTimer = lifeDuration;
     }
 
     void Update()
     {
+        lifeTimer -= Time.deltaTime;
+
+        if (lifeTimer <= 0f)
+        {
+            Destroy(gameObject);
+        }
+
         if (movingToPlayer == true)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);

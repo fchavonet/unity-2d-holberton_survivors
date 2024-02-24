@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
                 if (!particles.isPlaying)
                 {
                     particles.Play();
-                     SFXManager.instance.PlaySFX(1);
+                    SFXManager.instance.PlaySFX(1);
                 }
             }
             else
@@ -136,7 +136,12 @@ public class PlayerController : MonoBehaviour
         weaponToAdd.gameObject.SetActive(true);
 
         assignedWeapons.Add(weaponToAdd);
-        listWeapons.Add(weaponToAdd);
+
+        if (weaponToAdd.tag != "PlayerUpdate")
+        {
+            listWeapons.Add(weaponToAdd);
+        }
+
         unassignedWeapons.Remove(weaponToAdd);
     }
 
