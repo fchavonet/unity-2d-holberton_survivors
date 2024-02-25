@@ -11,6 +11,7 @@ public class PlayerHealthController : MonoBehaviour
     [Space(10)]
     public float currentHealth;
     public float maxHealth = 100f;
+    public float totalDamage = 0f;
     public GameObject deathEffect;
 
     void Awake()
@@ -31,14 +32,10 @@ public class PlayerHealthController : MonoBehaviour
         Regeneration();
     }
 
-    private void OnHit()
-    {
-        TakeDamage(10f);
-    }
-
     public void TakeDamage(float damageToTake)
     {
         currentHealth -= damageToTake;
+        totalDamage += damageToTake;
 
         if (currentHealth <= 0)
         {

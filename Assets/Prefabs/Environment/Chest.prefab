@@ -215,7 +215,7 @@ Transform:
   m_GameObject: {fileID: 6629439211844594643}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.96, y: 0.15, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -255,7 +255,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01537323, y: -0.023059845}
+  m_Offset: {x: 0, y: -0.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -266,7 +266,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6764212, y: 1.2920909}
+  m_Size: {x: 1, y: 0.82}
   m_EdgeRadius: 0
 --- !u!114 &5456909315255362100
 MonoBehaviour:
@@ -282,4 +282,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   increasePickupRange: 120
   effectDuration: 5
-  chestPrefab: {fileID: 6629439211844594643}

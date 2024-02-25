@@ -23,6 +23,10 @@ public class UIController : MonoBehaviour
     public GameObject defaultSelectedButton;
 
     public TMP_Text enemiesDefeatedCount;
+    public TMP_Text totalDamageReceivedCount;
+    public TMP_Text totalDamageCaused;
+
+
     public TMP_Text enemiesDefeatedGameOverCount;
     public TMP_Text enemiesDefeatedGameEndCount;
     public TMP_Text timeText;
@@ -40,6 +44,8 @@ public class UIController : MonoBehaviour
     private void Update()
     {
         enemiesDefeatedCount.text = "ENEMIES DEFEATED: " + LevelController.instance.enemiesDefeated.ToString("000000");
+        totalDamageReceivedCount.text = "DAMAGE RECEIVED: " + PlayerHealthController.instance.totalDamage.ToString("000000");
+
         enemiesDefeatedGameOverCount.text = "ENEMIES DEFEATED: " + LevelController.instance.enemiesDefeated.ToString("000000");
         enemiesDefeatedGameEndCount.text = "ENEMIES DEFEATED: " + LevelController.instance.enemiesDefeated.ToString("000000");
     }
@@ -96,7 +102,8 @@ public class UIController : MonoBehaviour
     {
         if (pauseScreen.activeSelf == false)
         {
-            SFXManager.instance.StopSFX(1);
+            SFXManager.instance.StopAllSFX();
+            
             pauseScreen.SetActive(true);
             Time.timeScale = 0f;
             EventSystem.current.SetSelectedGameObject(defaultSelectedButton);

@@ -57,8 +57,6 @@ public class LevelController : MonoBehaviour
 
     void LevelUp()
     {
-        SFXManager.instance.StopSFX(1);
-
         currentExperience -= expLevels[currentLevel];
 
         currentLevel++;
@@ -67,6 +65,8 @@ public class LevelController : MonoBehaviour
         {
             currentLevel = expLevels.Count - 1;
         }
+
+        SFXManager.instance.StopAllSFX();
 
         //PlayerController.instance.acticeWeapon.LevelUp();
         LevelTimer.instance.gameActive = false;

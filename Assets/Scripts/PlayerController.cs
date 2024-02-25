@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour
                 if (!particles.isPlaying)
                 {
                     particles.Play();
-                    SFXManager.instance.PlaySFX(1);
+                    SFXManager.instance.PlaySFX(0);
                 }
             }
             else
@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
                 if (particles.isPlaying)
                 {
                     particles.Stop();
-                    SFXManager.instance.StopSFX(1);
+                    SFXManager.instance.StopSFX(0);
                 }
             }
         }

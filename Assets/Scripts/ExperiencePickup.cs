@@ -52,7 +52,7 @@ public class ExperiencePickup : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            SFXManager.instance.PlaySFXPitched(2);
+            SFXManager.instance.PlaySFXPitched(1);
 
             LevelController.instance.GetExp(experienValue);
 

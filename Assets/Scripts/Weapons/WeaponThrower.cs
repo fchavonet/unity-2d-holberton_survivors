@@ -15,20 +15,21 @@ public class WeaponThrower : Weapon
 
     void Update()
     {
-        if(statsUpdated == true)
+        if (statsUpdated == true)
         {
             statsUpdated = false;
             SetStats();
         }
 
         throwCounter -= Time.deltaTime;
-        if(throwCounter <= 0)
+        if (throwCounter <= 0)
         {
             throwCounter = stats[weaponLevel].timeBetweenAttacks;
 
-            for(int i = 0; i < stats[weaponLevel].amount; i++)
+            for (int i = 0; i < stats[weaponLevel].amount; i++)
             {
                 Instantiate(damager, damager.transform.position, damager.transform.rotation).gameObject.SetActive(true);
+                SFXManager.instance.PlaySFXPitched(4);
             }
         }
     }

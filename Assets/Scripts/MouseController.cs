@@ -4,14 +4,12 @@ public class MouseController : MonoBehaviour
 {
     public Texture2D cursor;
 
-    private bool isMouseVisible = false;
+    private bool isMouseVisible;
 
     void Start()
     {
         Cursor.SetCursor(cursor, Vector2.zero, CursorMode.ForceSoftware);
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        isMouseVisible = false;
+        isMouseVisible = true;
     }
 
     public void OnShowMouse()

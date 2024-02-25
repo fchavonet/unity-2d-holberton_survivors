@@ -28,4 +28,12 @@ public class SFXManager : MonoBehaviour
 
         PlaySFX(sfxToPlay);
     }
+
+    public void StopAllSFX()
+    {
+        foreach (AudioSource sfx in soundEffects)
+        {
+            sfx.Stop();
+        }
+    }
 }

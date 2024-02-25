@@ -61,8 +61,8 @@ public class LevelTimer : MonoBehaviour
 
     IEnumerator GameOverCo()
     {
-        SFXManager.instance.StopSFX(1);
-        
+        SFXManager.instance.StopAllSFX();
+    
         yield return new WaitForSeconds(waitToShowEndScreen);
 
         Time.timeScale = 0f;
@@ -73,8 +73,6 @@ public class LevelTimer : MonoBehaviour
         UIController.instance.gameOverTimerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
         UIController.instance.gameOverScreen.SetActive(true);
         EventSystem.current.SetSelectedGameObject(defaultGameOverSelectedButton);
-
-        SFXManager.instance.PlaySFX(3);
     }
 
     public void BossSpawn()
@@ -114,8 +112,8 @@ public class LevelTimer : MonoBehaviour
 
     IEnumerator GameEndCo()
     {
-        SFXManager.instance.StopSFX(1);
-
+        SFXManager.instance.StopAllSFX();
+        
         yield return new WaitForSeconds(waitToShowEndScreen);
 
         Time.timeScale = 0f;

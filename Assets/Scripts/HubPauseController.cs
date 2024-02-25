@@ -25,7 +25,8 @@ public class HubPauseController : MonoBehaviour
     {
         if (pauseScreen.activeSelf == false)
         {
-            SFXManager.instance.StopSFX(1);
+            SFXManager.instance.StopAllSFX();
+        
             pauseScreen.SetActive(true);
             Time.timeScale = 0f;
             EventSystem.current.SetSelectedGameObject(defaultSelectedButton);
