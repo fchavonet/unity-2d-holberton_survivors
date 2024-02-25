@@ -8,6 +8,7 @@ public class LevelController : MonoBehaviour
 
     [Space(10)]
     public ExperiencePickup pickup;
+    public VortexCoin vortex;
 
     [Space(10)]
     public int currentExperience;
@@ -47,6 +48,11 @@ public class LevelController : MonoBehaviour
     public void SpawnExp(Vector3 position, int expValue)
     {
         Instantiate(pickup, position, Quaternion.identity).experienValue = expValue;
+    }
+
+    public void SpawnChest(Vector3 position)
+    {
+        Instantiate(vortex, position, Quaternion.identity);
     }
 
     void LevelUp()
