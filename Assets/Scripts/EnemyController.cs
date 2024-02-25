@@ -18,6 +18,7 @@ public class EnemyController : MonoBehaviour
     [Space(10)]
     public int experienceToGive = 1;
     public float coinDropRate = 0.5f;
+    public float chestDropRate = 0.3f;
 
     private float hitCounter;
     private float knockBackCounter;
@@ -87,9 +88,15 @@ public class EnemyController : MonoBehaviour
 
             LevelController.instance.IncrementEnemiesDefeated();
 
-            if (Random.value <= coinDropRate)
+            float random = Random.value;
+
+            if (random <= coinDropRate && random > chestDropRate)
             {
                 LevelController.instance.SpawnExp(transform.position, experienceToGive);
+            }
+            else if (random <= chestDropRate)
+            {
+                LevelController.instance.SpawnChest(transform.position);
             }
         }
 
