@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour
 
     Vector3 movement;
 
+    public bool isChestClosed = true;
+
     /*
     private Rigidbody2D rigidbody2d;
     private Vector2 movement;

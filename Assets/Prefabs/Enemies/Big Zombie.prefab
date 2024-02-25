@@ -129,6 +129,7 @@ MonoBehaviour:
   knockBackTime: 0.5
   experienceToGive: 2000
   coinDropRate: 1
+  chestDropRate: 0.001
 --- !u!1 &4082060519353995332
 GameObject:
   m_ObjectHideFlags: 0

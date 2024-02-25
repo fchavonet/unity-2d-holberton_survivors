@@ -24,7 +24,7 @@ public class SFXManager : MonoBehaviour
 
     public void PlaySFXPitched(int sfxToPlay)
     {
-        soundEffects[sfxToPlay].pitch = Random.Range(1f, 1.05f);
+        soundEffects[sfxToPlay].pitch = Random.Range(0.8f, 1.2f);
 
         PlaySFX(sfxToPlay);
     }

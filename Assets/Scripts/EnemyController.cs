@@ -18,7 +18,7 @@ public class EnemyController : MonoBehaviour
     [Space(10)]
     public int experienceToGive = 1;
     public float coinDropRate = 0.5f;
-    public float chestDropRate = 0.3f;
+    public float chestDropRate = 0.0001f;
 
     private float hitCounter;
     private float knockBackCounter;

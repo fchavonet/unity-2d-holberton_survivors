@@ -348,3 +348,4 @@ MonoBehaviour:
   knockBackTime: 0.5
   experienceToGive: 5
   coinDropRate: 0.5
+  chestDropRate: 0.001

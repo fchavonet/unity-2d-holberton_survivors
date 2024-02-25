@@ -122,13 +122,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody2d: {fileID: 8053689058647794849}
   spriteRenderer: {fileID: 7816144065435420582}
-  health: 25
-  moveSpeed: 1.85
+  health: 20
+  moveSpeed: 1.5
   damage: 15
   hitWaitTime: 0.5
   knockBackTime: 0.5
   experienceToGive: 15
   coinDropRate: 0.5
+  chestDropRate: 0.001
 --- !u!1 &4082060519353995332
 GameObject:
   m_ObjectHideFlags: 0
