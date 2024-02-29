@@ -19,6 +19,7 @@ public class EnemyDamager : MonoBehaviour
 
     private float damageCounter;
     private List<EnemyController> enemiesInRange = new List<EnemyController>();
+    private List<BossController> bossInRange = new List<BossController>();
     private Vector3 targetSize;
 
     void Start()
@@ -68,6 +69,19 @@ public class EnemyDamager : MonoBehaviour
                         i--;
                     }
                 }
+
+                for (int b = 0; b < bossInRange.Count; b++)
+                {
+                    if (bossInRange[b] != null)
+                    {
+                        bossInRange[b].TakeDamage(damageAmount, shouldKnockBack);
+                    }
+                    else
+                    {
+                        bossInRange.RemoveAt(b);
+                        b--;
+                    }
+                }
             }
         }
     }
@@ -78,7 +92,14 @@ public class EnemyDamager : MonoBehaviour
         {
             if (collision.tag == "Enemy" || collision.tag == "Boss")
             {
+                if(collision.CompareTag("Boss"))
+                {
+                    collision.GetComponent<BossController>().TakeDamage(damageAmount, shouldKnockBack);
+                }
+                else
+                {
                 collision.GetComponent<EnemyController>().TakeDamage(damageAmount, shouldKnockBack);
+                }
                 if(destroyOnImpact)
                 {
                     Destroy(gameObject);
@@ -89,19 +110,31 @@ public class EnemyDamager : MonoBehaviour
         {
             if (collision.tag == "Enemy" || collision.tag == "Boss")
             {
-                enemiesInRange.Add(collision.GetComponent<EnemyController>());
+                if (collision.CompareTag("Boss"))
+                {
+                    bossInRange.Add(collision.GetComponent<BossController>());
+                }
+                else
+                {
+                    enemiesInRange.Add(collision.GetComponent<EnemyController>());
+                }
             }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (damageOverTime == true)
+        if (damageOverTime)
         {
-            if (collision.tag == "Enemy" || collision.tag == "Boss")
+            if (collision.CompareTag("Enemy"))
             {
                 enemiesInRange.Remove(collision.GetComponent<EnemyController>());
             }
+            else if (collision.CompareTag("Boss"))
+            {
+                bossInRange.Remove(collision.GetComponent<BossController>());
+            }
         }
     }
+
 }
