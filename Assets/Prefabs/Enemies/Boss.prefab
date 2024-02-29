@@ -122,7 +122,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody2d: {fileID: 8053689058647794849}
   spriteRenderer: {fileID: 0}
-  health: 10000
+  deathEffect: {fileID: 3235277780342186300, guid: e8c18ec443633e547b537a1c31804075, type: 3}
+  health: 5
   damage: 100
   moveSpeed: 2
   knockBackTime: 0.5

@@ -8,6 +8,7 @@ public class BossController : MonoBehaviour
     [Space(10)]
     public Rigidbody2D rigidbody2d;
     public SpriteRenderer spriteRenderer;
+    public GameObject deathEffect;
     private Transform target;
 
     [Space(10)]
@@ -75,6 +76,7 @@ public class BossController : MonoBehaviour
         {
             LevelController.instance.IncrementEnemiesDefeated();
             Destroy(gameObject);
+            Instantiate(deathEffect, transform.position,  Quaternion.identity);
         }
         DamageController.instance.SpawnDamage(damageToTake, transform.position);
     }
