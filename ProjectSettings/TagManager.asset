@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Boss
   - PlayerUpdate
+  - Stairs
   layers:
   - Default
   - TransparentFX

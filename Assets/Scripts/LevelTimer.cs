@@ -18,9 +18,11 @@ public class LevelTimer : MonoBehaviour
 
     private PlayerController player;
     private float timer;
-    private float waitToShowEndScreen = 1f;
+    private float waitToShowEndScreen = 2f;
     private bool bossSpawned = false;
     public bool gameActive;
+
+    public bool endGame = true;
 
     public GameObject defaultGameOverSelectedButton;
     public GameObject defaultEndGameSelectedButton;
@@ -45,7 +47,7 @@ public class LevelTimer : MonoBehaviour
             UIController.instance.UpdateTimer(timer);
         }
 
-        if (timer >= endTimer)
+        if (endGame == true && timer >= endTimer)
         {
             BossSpawn();
             EndGame();

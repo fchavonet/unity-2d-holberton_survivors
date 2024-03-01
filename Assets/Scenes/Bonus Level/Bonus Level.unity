@@ -12135,7 +12135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &584340660
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13054,8 +13054,9 @@ MonoBehaviour:
   enemySpawner: {fileID: 794956864}
   deathEffect: {fileID: 965518837548101591, guid: d9fbd02aea997d542a4ab20c4efdbde9, type: 3}
   boss: {fileID: 609843814393310769, guid: 22a2c7911a5164349810a9c36dc59abd, type: 3}
-  endTimer: 600
+  endTimer: 5
   gameActive: 0
+  endGame: 0
   defaultGameOverSelectedButton: {fileID: 61065509}
   defaultEndGameSelectedButton: {fileID: 240106390}
 --- !u!4 &653466449
@@ -13390,7 +13391,7 @@ RectTransform:
   m_Father: {fileID: 1546858419}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -13446,7 +13447,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2838689949295158022, guid: 9621761086a1e93408e2f89c9ad9c757, type: 3}
       propertyPath: speed
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2838689949295158022, guid: 9621761086a1e93408e2f89c9ad9c757, type: 3}
       propertyPath: maxWeapons
@@ -13470,7 +13471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2838689949295158022, guid: 9621761086a1e93408e2f89c9ad9c757, type: 3}
       propertyPath: unassignedWeapons.Array.size
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2838689949295158022, guid: 9621761086a1e93408e2f89c9ad9c757, type: 3}
       propertyPath: assignedWeapons.Array.data[0]
@@ -13761,165 +13762,9 @@ MonoBehaviour:
   timeToSpawn: 2
   checkPerFrame: 50
   waves:
-  - enemyToSpawn: {fileID: 609843814393310769, guid: 7c5430e87b019ff49a2db4fb94abccf5, type: 3}
-    waveLength: 15
-    timeBetweenSpawns: 0.5
-  - enemyToSpawn: {fileID: 609843814393310769, guid: 7c5430e87b019ff49a2db4fb94abccf5, type: 3}
-    waveLength: 14
-    timeBetweenSpawns: 0.5
   - enemyToSpawn: {fileID: 7774403021564267678, guid: fb297a91d2289414a8af738fd05bd224, type: 3}
-    waveLength: 2
-    timeBetweenSpawns: 0.3
-  - enemyToSpawn: {fileID: 609843814393310769, guid: 7c5430e87b019ff49a2db4fb94abccf5, type: 3}
-    waveLength: 14
-    timeBetweenSpawns: 0.3
-  - enemyToSpawn: {fileID: 609843814393310769, guid: 7c5430e87b019ff49a2db4fb94abccf5, type: 3}
-    waveLength: 15
-    timeBetweenSpawns: 0.3
-  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
-    waveLength: 15
-    timeBetweenSpawns: 0.5
-  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
-    waveLength: 14
-    timeBetweenSpawns: 0.5
-  - enemyToSpawn: {fileID: 7774403021564267678, guid: fb297a91d2289414a8af738fd05bd224, type: 3}
-    waveLength: 2
-    timeBetweenSpawns: 0.13
-  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
-    waveLength: 14
-    timeBetweenSpawns: 0.5
-  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
-    waveLength: 15
-    timeBetweenSpawns: 0.5
-  - enemyToSpawn: {fileID: 1407668690032963012, guid: 2b336eceb31f59c4ea8024f47089a7eb, type: 3}
-    waveLength: 30
-    timeBetweenSpawns: 0.3
-  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
-    waveLength: 15
-    timeBetweenSpawns: 0.5
-  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
-    waveLength: 15
-    timeBetweenSpawns: 0.5
-  - enemyToSpawn: {fileID: 609843814393310769, guid: f12d48c9c5717aa4e8b9e8d44c3e0e2e, type: 3}
-    waveLength: 15
-    timeBetweenSpawns: 0.5
-  - enemyToSpawn: {fileID: 609843814393310769, guid: f12d48c9c5717aa4e8b9e8d44c3e0e2e, type: 3}
-    waveLength: 14
-    timeBetweenSpawns: 0.5
-  - enemyToSpawn: {fileID: 1407668690032963012, guid: 2b336eceb31f59c4ea8024f47089a7eb, type: 3}
-    waveLength: 2
-    timeBetweenSpawns: 0.02
-  - enemyToSpawn: {fileID: 609843814393310769, guid: f12d48c9c5717aa4e8b9e8d44c3e0e2e, type: 3}
-    waveLength: 14
-    timeBetweenSpawns: 0.5
-  - enemyToSpawn: {fileID: 609843814393310769, guid: f12d48c9c5717aa4e8b9e8d44c3e0e2e, type: 3}
-    waveLength: 15
-    timeBetweenSpawns: 0.25
-  - enemyToSpawn: {fileID: 609843814393310769, guid: 4abb1fcdc5cf0f1478cc8fd6481f8a05, type: 3}
-    waveLength: 1
-    timeBetweenSpawns: 1
-  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
-    waveLength: 14
-    timeBetweenSpawns: 0.14
-  - enemyToSpawn: {fileID: 609843814393310769, guid: 7c5430e87b019ff49a2db4fb94abccf5, type: 3}
-    waveLength: 14
-    timeBetweenSpawns: 0.14
-  - enemyToSpawn: {fileID: 609843814393310769, guid: f12d48c9c5717aa4e8b9e8d44c3e0e2e, type: 3}
-    waveLength: 2
-    timeBetweenSpawns: 0.08
-  - enemyToSpawn: {fileID: 609843814393310769, guid: 7c5430e87b019ff49a2db4fb94abccf5, type: 3}
-    waveLength: 15
-    timeBetweenSpawns: 0.14
-  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
-    waveLength: 14
-    timeBetweenSpawns: 0.14
-  - enemyToSpawn: {fileID: 609843814393310769, guid: 7c5430e87b019ff49a2db4fb94abccf5, type: 3}
-    waveLength: 15
-    timeBetweenSpawns: 0.075
-  - enemyToSpawn: {fileID: 7774403021564267678, guid: fb297a91d2289414a8af738fd05bd224, type: 3}
-    waveLength: 14
-    timeBetweenSpawns: 0.28
-  - enemyToSpawn: {fileID: 1407668690032963012, guid: 2b336eceb31f59c4ea8024f47089a7eb, type: 3}
-    waveLength: 2
-    timeBetweenSpawns: 0.02
-  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
-    waveLength: 14
-    timeBetweenSpawns: 0.075
-  - enemyToSpawn: {fileID: 609843814393310769, guid: f12d48c9c5717aa4e8b9e8d44c3e0e2e, type: 3}
-    waveLength: 15
-    timeBetweenSpawns: 0.28
-  - enemyToSpawn: {fileID: 609843814393310769, guid: 594d249c5cc1e9d40a958281ff20fa4f, type: 3}
     waveLength: 1
     timeBetweenSpawns: 0.01
-  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
-    waveLength: 14
-    timeBetweenSpawns: 0.5
-  - enemyToSpawn: {fileID: 609843814393310769, guid: 4abb1fcdc5cf0f1478cc8fd6481f8a05, type: 3}
-    waveLength: 15
-    timeBetweenSpawns: 3
-  - enemyToSpawn: {fileID: 7774403021564267678, guid: fb297a91d2289414a8af738fd05bd224, type: 3}
-    waveLength: 15
-    timeBetweenSpawns: 0.2
-  - enemyToSpawn: {fileID: 609843814393310769, guid: 226870cf6ed92d44bb96b24d5d84c316, type: 3}
-    waveLength: 15
-    timeBetweenSpawns: 0.2
-  - enemyToSpawn: {fileID: 609843814393310769, guid: f12d48c9c5717aa4e8b9e8d44c3e0e2e, type: 3}
-    waveLength: 14
-    timeBetweenSpawns: 0.05
-  - enemyToSpawn: {fileID: 609843814393310769, guid: ccba860548012f14cb54a499ca60e22e, type: 3}
-    waveLength: 1
-    timeBetweenSpawns: 1
-  - enemyToSpawn: {fileID: 7774403021564267678, guid: fb297a91d2289414a8af738fd05bd224, type: 3}
-    waveLength: 15
-    timeBetweenSpawns: 0.05
-  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
-    waveLength: 15
-    timeBetweenSpawns: 0.1
-  - enemyToSpawn: {fileID: 609843814393310769, guid: 226870cf6ed92d44bb96b24d5d84c316, type: 3}
-    waveLength: 15
-    timeBetweenSpawns: 0.01
-  - enemyToSpawn: {fileID: 609843814393310769, guid: 71fabf01128bbbd479d468270539e133, type: 3}
-    waveLength: 15
-    timeBetweenSpawns: 0.3
-  - enemyToSpawn: {fileID: 609843814393310769, guid: 226870cf6ed92d44bb96b24d5d84c316, type: 3}
-    waveLength: 14
-    timeBetweenSpawns: 0.3
-  - enemyToSpawn: {fileID: 609843814393310769, guid: 594d249c5cc1e9d40a958281ff20fa4f, type: 3}
-    waveLength: 2
-    timeBetweenSpawns: 0.0004
-  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
-    waveLength: 14
-    timeBetweenSpawns: 0.3
-  - enemyToSpawn: {fileID: 609843814393310769, guid: 71fabf01128bbbd479d468270539e133, type: 3}
-    waveLength: 15
-    timeBetweenSpawns: 0.3
-  - enemyToSpawn: {fileID: 609843814393310769, guid: 7c5430e87b019ff49a2db4fb94abccf5, type: 3}
-    waveLength: 12
-    timeBetweenSpawns: 0.06
-  - enemyToSpawn: {fileID: 7774403021564267678, guid: fb297a91d2289414a8af738fd05bd224, type: 3}
-    waveLength: 12
-    timeBetweenSpawns: 0.06
-  - enemyToSpawn: {fileID: 609843814393310769, guid: e18c8c1a5076a6e449d44d605c0caedc, type: 3}
-    waveLength: 12
-    timeBetweenSpawns: 0.12
-  - enemyToSpawn: {fileID: 1407668690032963012, guid: 2b336eceb31f59c4ea8024f47089a7eb, type: 3}
-    waveLength: 12
-    timeBetweenSpawns: 0.06
-  - enemyToSpawn: {fileID: 609843814393310769, guid: f12d48c9c5717aa4e8b9e8d44c3e0e2e, type: 3}
-    waveLength: 12
-    timeBetweenSpawns: 0.12
-  - enemyToSpawn: {fileID: 609843814393310769, guid: 226870cf6ed92d44bb96b24d5d84c316, type: 3}
-    waveLength: 12
-    timeBetweenSpawns: 0.12
-  - enemyToSpawn: {fileID: 609843814393310769, guid: 594d249c5cc1e9d40a958281ff20fa4f, type: 3}
-    waveLength: 12
-    timeBetweenSpawns: 0.06
-  - enemyToSpawn: {fileID: 609843814393310769, guid: 4abb1fcdc5cf0f1478cc8fd6481f8a05, type: 3}
-    waveLength: 12
-    timeBetweenSpawns: 0.5
-  - enemyToSpawn: {fileID: 609843814393310769, guid: 71fabf01128bbbd479d468270539e133, type: 3}
-    waveLength: 1
-    timeBetweenSpawns: 0.001
   spawnedEnemies: []
 --- !u!4 &794956865
 Transform:
@@ -16469,7 +16314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1346631325
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20114,6 +19959,171 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072288369}
   m_CullTransparentMesh: 1
+--- !u!43 &2095086784
+Mesh:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 11
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 54
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 20
+    localAABB:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.275, y: 0.42499924, z: 0}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 00000100020003000100000004000100030004000500010006000500040007000500060008000500070005000800090002000a00000000000b00030001000c00020005000d00010003000e00040004000f000600090010000500060011000700070012000800080013000900
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 20
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 28
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 880
+    _typelessdata: cdcc8c3e8099d9be000000000000803f000000800000008000000080cdcc8c3e8099d9becdcc8c3e8099d9becdcc8c3e8099d93e00000000000000800000803f0000008000000080cdcc8c3e8099d93ecdcc8c3e8099d93ecdcc8c3e00000000000000000000803f000000800000008000000080cdcc8c3e8099d93ecdcc8c3e8099d9becdcc0c3e08aea7be00000000cf1314bff2d350bf0000000000000080cdcc8c3e8099d9be000000001f856bbe000000001f856bbe00000000cf1314bff1d350bf0000000000000080000000001f856bbe000000001f856bbe000000008099d93e00000000000000800000803f0000008000000080cdcc8cbe8099d93ecdcc8c3e8099d93ecdcc0cbe08aea7be00000000cf13143ff1d350bf0000008000000080000000001f856bbecdcc8cbe8099d9becdcc8cbe8099d9be00000000cf13143ff2d350bf0000008000000080cdcc8cbe8099d9becdcc8cbe8099d9becdcc8cbe0000000000000000000080bf000000800000008000000080cdcc8cbe8099d9becdcc8cbe8099d93ecdcc8cbe8099d93e00000000000080bf000000800000008000000080cdcc8cbe8099d93ecdcc8cbe8099d93ecdcc8c3e00000000000000000000803f000000800000008000000080cdcc8c3e8099d93ecdcc8c3e8099d9becdcc8c3e8099d9be00000000cf1314bff2d350bf0000000000000080cdcc8c3e8099d9becdcc8c3e8099d9becdcc8c3e8099d93e000000000000803f000000800000008000000080cdcc8c3e8099d93ecdcc8c3e8099d93e000000008099d93e00000000000000800000803f0000008000000080cdcc8cbe8099d93ecdcc8c3e8099d93ecdcc0c3e08aea7be00000000cf1314bff1d350bf0000000000000080cdcc8c3e8099d9be000000001f856bbe000000001f856bbe00000000cf13143ff1d350bf0000008000000080000000001f856bbe000000001f856bbecdcc8cbe8099d93e00000000000000800000803f0000008000000080cdcc8cbe8099d93ecdcc8cbe8099d93ecdcc0cbe08aea7be00000000cf13143ff2d350bf0000008000000080000000001f856bbecdcc8cbe8099d9becdcc8cbe8099d9be00000000000080bf000000800000008000000080cdcc8cbe8099d9becdcc8cbe8099d9becdcc8cbe0000000000000000000080bf000000800000008000000080cdcc8cbe8099d9becdcc8cbe8099d93e
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.275, y: 0.42499924, z: 0}
+  m_MeshUsageFlags: 0
+  m_CookingOptions: 30
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &2111764919
 GameObject:
   m_ObjectHideFlags: 0

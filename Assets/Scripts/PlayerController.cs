@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public float pickupRange = 1.5f;
     public float pickupRangeMultiplier = 1.1f;
 
+    public float playerDistance;
+
     // public Weapon acticeWeapon;
 
     public List<Weapon> unassignedWeapons, assignedWeapons, listWeapons;
@@ -28,6 +30,8 @@ public class PlayerController : MonoBehaviour
     Vector3 movement;
 
     public bool isChestClosed = true;
+
+    public List<DialogueTrigger> dialogueTriggers = new List<DialogueTrigger>();
 
     /*
     private Rigidbody2D rigidbody2d;
@@ -60,11 +64,26 @@ public class PlayerController : MonoBehaviour
         movement = new Vector3(inputMovement.x, inputMovement.y, 0);
     }
 
+    public void OnOpenDialogue()
+    {
+        foreach (DialogueTrigger trigger in dialogueTriggers)
+        {
+            if (trigger.isInRange && !DialogueManager.instance.isDialogueOpen)
+            {
+                trigger.TriggerDialogue();
+            }
+        }
+    }
+
     private void FixedUpdate()
     {
         //rigidbody2d.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
 
         transform.position += movement * speed * Time.fixedDeltaTime;
+
+        float distanceThisFrame = movement.magnitude * speed * Time.fixedDeltaTime;
+        playerDistance += distanceThisFrame;
+
         Flip();
         Running();
     }

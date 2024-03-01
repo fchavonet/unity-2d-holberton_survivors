@@ -15,6 +15,9 @@ public class UIController : MonoBehaviour
     public LevelUpSelectionButton[] levelUpButton;
 
     public GameObject levelUpPanel;
+    public GameObject statisticsPanel;
+
+    public bool isStatisticsPanelDisplayed = false;
 
     public string mainMenuName;
 
@@ -25,6 +28,7 @@ public class UIController : MonoBehaviour
     public TMP_Text enemiesDefeatedCount;
     public TMP_Text totalDamageReceivedCount;
     public TMP_Text totalDamageCaused;
+    public TMP_Text totalPlayerDistance;
 
 
     public TMP_Text enemiesDefeatedGameOverCount;
@@ -45,6 +49,7 @@ public class UIController : MonoBehaviour
     {
         enemiesDefeatedCount.text = "ENEMIES DEFEATED: " + LevelController.instance.enemiesDefeated.ToString("000000");
         totalDamageReceivedCount.text = "DAMAGE RECEIVED: " + PlayerHealthController.instance.totalDamage.ToString("000000");
+        totalPlayerDistance.text = "PLAYER DISTANCE: " + PlayerController.instance.playerDistance.ToString("000000");
 
         enemiesDefeatedGameOverCount.text = "ENEMIES DEFEATED: " + LevelController.instance.enemiesDefeated.ToString("000000");
         enemiesDefeatedGameEndCount.text = "ENEMIES DEFEATED: " + LevelController.instance.enemiesDefeated.ToString("000000");
@@ -63,6 +68,18 @@ public class UIController : MonoBehaviour
         if (LevelTimer.instance.gameActive == true)
         {
             PauseUnpause();
+        }
+    }
+
+    public void OnDisplayStatistics()
+    {
+         if (statisticsPanel.activeSelf == false)
+        {
+            statisticsPanel.SetActive(true);   
+        }
+        else
+        {
+            statisticsPanel.SetActive(false); 
         }
     }
 
@@ -103,7 +120,7 @@ public class UIController : MonoBehaviour
         if (pauseScreen.activeSelf == false)
         {
             SFXManager.instance.StopAllSFX();
-            
+
             pauseScreen.SetActive(true);
             Time.timeScale = 0f;
             EventSystem.current.SetSelectedGameObject(defaultSelectedButton);

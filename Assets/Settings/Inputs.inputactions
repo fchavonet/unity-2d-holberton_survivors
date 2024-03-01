@@ -81,6 +81,17 @@
                     "action": "PressStart",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "633a0c1a-53f9-4777-be63-aab28010cf10",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PressStart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -96,6 +107,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "OpenDialogue",
+                    "type": "Button",
+                    "id": "a50c7ff8-a61b-46f9-8434-3d67a46a32a8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -274,6 +294,28 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "75115347-6a57-42ac-8315-6d2e69f1bebf",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenDialogue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "681f1c1d-1cb6-48fb-93b8-2f5d287321f4",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenDialogue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -285,6 +327,15 @@
                     "name": "PressPause",
                     "type": "Button",
                     "id": "c459d79f-79f9-4dfb-877f-879e92555f05",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DisplayStatistics",
+                    "type": "Button",
+                    "id": "dd1769e7-b95e-41b8-87e7-2bf0c22694e4",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -322,6 +373,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "PressPause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d649bdcc-2ebd-4a97-8454-2679412e8e59",
+                    "path": "<Keyboard>/backquote",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DisplayStatistics",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
