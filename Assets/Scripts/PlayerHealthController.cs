@@ -42,6 +42,7 @@ public class PlayerHealthController : MonoBehaviour
             gameObject.SetActive(false);
 
             LevelTimer.instance.GameOver();
+            CameraShake.instance.ShakeIt(0.5f, 0.2f);
             Instantiate(deathEffect, transform.position, transform.rotation);
         }
 

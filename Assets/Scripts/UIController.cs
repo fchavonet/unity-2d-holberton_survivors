@@ -27,12 +27,8 @@ public class UIController : MonoBehaviour
 
     public TMP_Text enemiesDefeatedCount;
     public TMP_Text totalDamageReceivedCount;
-    public TMP_Text totalDamageCaused;
     public TMP_Text totalPlayerDistance;
 
-
-    public TMP_Text enemiesDefeatedGameOverCount;
-    public TMP_Text enemiesDefeatedGameEndCount;
     public TMP_Text timeText;
 
     public GameObject gameOverScreen;
@@ -45,14 +41,12 @@ public class UIController : MonoBehaviour
         instance = this;
     }
 
+    //Statistics menu
     private void Update()
     {
         enemiesDefeatedCount.text = "ENEMIES DEFEATED: " + LevelController.instance.enemiesDefeated.ToString("000000");
         totalDamageReceivedCount.text = "DAMAGE RECEIVED: " + PlayerHealthController.instance.totalDamage.ToString("000000");
         totalPlayerDistance.text = "PLAYER DISTANCE: " + PlayerController.instance.playerDistance.ToString("000000");
-
-        enemiesDefeatedGameOverCount.text = "ENEMIES DEFEATED: " + LevelController.instance.enemiesDefeated.ToString("000000");
-        enemiesDefeatedGameEndCount.text = "ENEMIES DEFEATED: " + LevelController.instance.enemiesDefeated.ToString("000000");
     }
 
     /*void Update()

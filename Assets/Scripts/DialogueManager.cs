@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
-using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -11,8 +10,7 @@ public class DialogueManager : MonoBehaviour
 
     public Animator animator;
 
-    public GameObject defaultSelectedButton;
-
+    public Image npcImage;
     public TMP_Text nameText;
     public TMP_Text dialogueText;
 
@@ -38,6 +36,7 @@ public class DialogueManager : MonoBehaviour
         isDialogueOpen = true;
         animator.SetBool("isOpen", true);
 
+        npcImage.sprite = dialogue.npcSprite;
         nameText.text = dialogue.name;
 
         sentences.Clear();
@@ -46,8 +45,6 @@ public class DialogueManager : MonoBehaviour
         {
             sentences.Enqueue(sentence);
         }
-
-        EventSystem.current.SetSelectedGameObject(defaultSelectedButton);
 
         DisplayNextSentence();
     }

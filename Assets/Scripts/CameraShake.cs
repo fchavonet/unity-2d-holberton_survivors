@@ -31,7 +31,7 @@ public class CameraShake : MonoBehaviour
             float x = Random.Range(-1f, 1f) * shakeAmount;
             float y = Random.Range(-1f, 1f) * shakeAmount;
         
-            transform.localPosition = new Vector3(originalCameraPosition.x + x, originalCameraPosition.y+y, originalCameraPosition.z);
+            transform.localPosition = new Vector3(originalCameraPosition.x + x, originalCameraPosition.y + y, originalCameraPosition.z);
 
             elapsed += Time.deltaTime;
 

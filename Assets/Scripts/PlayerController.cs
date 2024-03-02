@@ -75,6 +75,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void OnNextSentence()
+    {
+        DialogueManager.instance.DisplayNextSentence();
+    }
+
     private void FixedUpdate()
     {
         //rigidbody2d.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
