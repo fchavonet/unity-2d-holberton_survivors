@@ -39,8 +39,8 @@ public class Lightning : Weapon
                     Instantiate(projectile, targetPosition, Quaternion.identity).gameObject.SetActive(true);
                 }
                 SFXManager.instance.PlaySFXPitched(6);
+                CameraShake.instance.ShakeIt(0.1f, 0.2f);
             }
-
         }
     }
 

@@ -82,6 +82,8 @@ public class LevelTimer : MonoBehaviour
     {
         if (!bossSpawned)
         {
+            CameraShake.instance.ShakeIt(0.5f, 0.2f);
+            
             Instantiate(boss, new Vector3(player.transform.position.x + (-30), player.transform.position.y, 0), Quaternion.identity);
 
             bossSpawned = true;
