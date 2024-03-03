@@ -118,9 +118,13 @@ public class LevelTimer : MonoBehaviour
 
     IEnumerator GameEndCo()
     {
-        SFXManager.instance.StopAllSFX();
+        SFXManager.instance.StopSFX(0);
         
         yield return new WaitForSeconds(waitToShowEndScreen);
+
+        BGMManager.instance.StopBGM(0);
+        SFXManager.instance.PlaySFX(9);
+        SFXManager.instance.PlaySFX(10);
 
         Time.timeScale = 0f;
 
