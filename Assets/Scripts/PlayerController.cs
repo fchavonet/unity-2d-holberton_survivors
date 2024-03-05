@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     Vector3 movement;
 
     public bool isChestClosed = true;
+    public bool isChestSpawned = false;
 
     public List<DialogueTrigger> dialogueTriggers = new List<DialogueTrigger>();
 

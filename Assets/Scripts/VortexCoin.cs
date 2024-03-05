@@ -38,5 +38,6 @@ public class VortexCoin : MonoBehaviour
         player.pickupRange = originalPickupRange;
         Destroy(gameObject);
         PlayerController.instance.isChestClosed = true;
+        PlayerController.instance.isChestSpawned = false;
     }
 }

@@ -124,12 +124,11 @@ MonoBehaviour:
   spriteRenderer: {fileID: 7816144065435420582}
   health: 50
   moveSpeed: 4
-  damage: 50
+  damage: 25
   hitWaitTime: 0.5
   knockBackTime: 0.5
   experienceToGive: 150
   coinDropRate: 0.5
-  chestDropRate: 0.001
 --- !u!1 &4082060519353995332
 GameObject:
   m_ObjectHideFlags: 0

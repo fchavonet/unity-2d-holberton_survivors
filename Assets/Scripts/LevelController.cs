@@ -52,7 +52,11 @@ public class LevelController : MonoBehaviour
 
     public void SpawnChest(Vector3 position)
     {
-        Instantiate(vortex, position, Quaternion.identity);
+        if (PlayerController.instance.isChestSpawned == false)
+        {
+            PlayerController.instance.isChestSpawned = true;
+            Instantiate(vortex, position, Quaternion.identity);
+        }
     }
 
     void LevelUp()
