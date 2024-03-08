@@ -2,9 +2,9 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class LevelTimer : MonoBehaviour
+public class GameController : MonoBehaviour
 {
-    public static LevelTimer instance;
+    public static GameController instance;
 
     [Space(10)]
     public EnemySpawner enemySpawner;

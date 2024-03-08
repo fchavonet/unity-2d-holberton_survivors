@@ -59,7 +59,7 @@ public class UIController : MonoBehaviour
 
     public void OnPressPause()
     {
-        if (LevelTimer.instance.gameActive == true)
+        if (GameController.instance.gameActive == true)
         {
             PauseUnpause();
         }
@@ -89,7 +89,7 @@ public class UIController : MonoBehaviour
     {
         levelUpPanel.SetActive(false);
         Time.timeScale = 1f;
-        LevelTimer.instance.gameActive = true;
+        GameController.instance.gameActive = true;
     }
 
     public void GoToMainMenu()

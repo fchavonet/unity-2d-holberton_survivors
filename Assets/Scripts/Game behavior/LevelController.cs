@@ -73,7 +73,7 @@ public class LevelController : MonoBehaviour
         }
 
         //PlayerController.instance.acticeWeapon.LevelUp();
-        LevelTimer.instance.gameActive = false;
+        GameController.instance.gameActive = false;
         UIController.instance.levelUpPanel.SetActive(true);
         EventSystem.current.SetSelectedGameObject(defaultSelectedButton);
 
