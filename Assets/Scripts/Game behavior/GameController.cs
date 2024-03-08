@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour
 
     private PlayerController player;
     private float timer;
+    public int bestTimer;
     private float waitToShowEndScreen = 2f;
     private bool bossSpawned = false;
     public bool gameActive;
@@ -70,6 +71,8 @@ public class GameController : MonoBehaviour
         SFXManager.instance.PlaySFX(8);
 
         Time.timeScale = 0f;
+
+        bestTimer = Mathf.FloorToInt(timer);
 
         float minutes = Mathf.FloorToInt(timer / 60f);
         float seconds = Mathf.FloorToInt(timer % 60);
