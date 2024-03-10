@@ -6,7 +6,7 @@ public class Dagger : Weapon
     // Damager component reference.
     public EnemyDamager damager;
     // Projectile prefab reference.
-    public Projectile projectile;
+    public ProjectileWeapon projectile;
 
     [Space(10)]
     // Layer mask for detecting enemies.

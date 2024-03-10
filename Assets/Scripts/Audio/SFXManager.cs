@@ -5,6 +5,7 @@ public class SFXManager : MonoBehaviour
     // Singleton instance of SFXManager for easy access from other scripts
     public static SFXManager instance;
 
+    [Space(10)]
     // Array of audio sources for sound effects
     public AudioSource[] soundEffects;
 

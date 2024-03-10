@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class LeaderboardController : MonoBehaviour
 {
+    [Space(10)]
     // Reference to the TMP_InputField for player name input
     public TMP_InputField inputField;
 

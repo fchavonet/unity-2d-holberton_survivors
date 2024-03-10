@@ -4,67 +4,84 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    // Singleton instance.
     public static PlayerController instance;
 
     [Space(10)]
+    // Animator component.
     public Animator animator;
+    // SpriteRenderer component.
     public SpriteRenderer spriteRenderer;
+    // List of footstep particles.
     public List<ParticleSystem> footParticles;
 
     [Space(10)]
+    // Player movement speed.
     public float speed = 3f;
+    // Speed multiplier for leveling up.
     public float speedMultiplier = 1.1f;
+
+    [Space(10)]
+    // Pickup range for weapons.
     public float pickupRange = 1.5f;
+    // Pickup range multiplier for leveling up.
     public float pickupRangeMultiplier = 1.1f;
 
+    [Space(10)]
+    // Distance traveled by the player.
     public float playerDistance;
 
-    // public Weapon acticeWeapon;
-
-    public List<Weapon> unassignedWeapons, assignedWeapons, listWeapons;
+    [Space(10)]
+    // Maximum number of weapons.
     public int maxWeapons = 3;
+    // List of unassigned weapons.
+    public List<Weapon> unassignedWeapons;
+    // List of assigned weapons.
+    public List<Weapon> assignedWeapons;
+    // List of all weapons.
+    public List<Weapon> listWeapons;
 
     [HideInInspector]
+    // Fully levelled weapons.
     public List<Weapon> fullyLevelledWeapons = new List<Weapon>();
 
-    Vector3 movement;
-
+    [HideInInspector]
+    // Flag for chest state.
     public bool isChestClosed = true;
+    [HideInInspector]
+    // Flag for spawned chest.
     public bool isChestSpawned = false;
 
+    [HideInInspector]
+    // List of dialogue triggers.
     public List<DialogueTrigger> dialogueTriggers = new List<DialogueTrigger>();
 
-    /*
-    private Rigidbody2D rigidbody2d;
-    private Vector2 movement;
+    // Movement vector.
+    Vector3 movement;
 
     private void Awake()
     {
-        rigidbody2d = GetComponent<Rigidbody2D>();
-    }
-    */
-
-    private void Awake()
-    {
+        // Set instance as this.
         instance = this;
     }
 
     void Start()
     {
+        // Add a weapon if no weapons are assigned.
         if (assignedWeapons.Count == 0)
         {
             AddWeapon(Random.Range(0, unassignedWeapons.Count));
         }
     }
 
+    // Movement input handler.
     private void OnMovement(InputValue value)
     {
-        //movement = value.Get<Vector2>();
-
         Vector2 inputMovement = value.Get<Vector2>();
         movement = new Vector3(inputMovement.x, inputMovement.y, 0);
     }
 
+    // Open dialogue handler.
     public void OnOpenDialogue()
     {
         foreach (DialogueTrigger trigger in dialogueTriggers)
@@ -76,24 +93,27 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Next sentence handler.
     public void OnNextSentence()
     {
         DialogueManager.instance.DisplayNextSentence();
     }
 
+    // Fixed update for movement.
     private void FixedUpdate()
     {
-        //rigidbody2d.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
-
         transform.position += movement * speed * Time.fixedDeltaTime;
 
         float distanceThisFrame = movement.magnitude * speed * Time.fixedDeltaTime;
         playerDistance += distanceThisFrame;
 
+        // Flip player sprite.
         Flip();
+        // Handle running animation and particles.
         Running();
     }
 
+    // Flip player sprite based on movement direction.
     private void Flip()
     {
         if (movement.x > 0)
@@ -106,6 +126,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Handle running animation and particles.
     private void Running()
     {
         foreach (ParticleSystem particles in footParticles)
@@ -133,6 +154,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Add a weapon to the player's inventory by index.
     public void AddWeapon(int weaponNumber)
     {
         if (weaponNumber < unassignedWeapons.Count)
@@ -158,6 +180,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Add a weapon to the player's inventory directly.
     public void AddWeapon(Weapon weaponToAdd)
     {
         weaponToAdd.gameObject.SetActive(true);
@@ -172,11 +195,13 @@ public class PlayerController : MonoBehaviour
         unassignedWeapons.Remove(weaponToAdd);
     }
 
+    // Level up speed.
     public void SpeedLevelUp()
     {
         speed *= speedMultiplier;
     }
 
+    // Level up pickup range.
     public void PickupRangeLevelUp()
     {
         pickupRange *= pickupRangeMultiplier;

@@ -6,10 +6,12 @@ public class CameraShake : MonoBehaviour
     // Singleton instance to allow easy access from other scripts
     public static CameraShake instance;
 
+    [Space(10)]
     // Duration of the shake effect
     public float shakeDuration = 0.1f;
     // Magnitude of the shake effect
     public float shakeAmount = 0.2f;
+
     // Flag to check if the camera is already shaking
     private bool isShaking = false;
 

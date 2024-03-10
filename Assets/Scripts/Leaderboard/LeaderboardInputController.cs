@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class LeaderboardInputController : MonoBehaviour
 {
+    [Space(10)]
     // Reference to the TMP_InputField for player name input
     public TMP_InputField inputField;
-
     // Maximum number of characters allowed in the input field
     public int maxCharacters = 10;
 

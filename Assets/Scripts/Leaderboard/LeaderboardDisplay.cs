@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class LeaderboardDisplay : MonoBehaviour
 {
+    [Space(10)]
     // Array of TextMeshProUGUI elements to display highscores
     public TMPro.TextMeshProUGUI[] highscoreText;
 

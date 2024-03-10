@@ -9,6 +9,7 @@ public class PlayerPickupRange : Weapon
 
     public void Update()
     {
+        // Check if stats are updated and upgrade pickup range accordingly.
         if (statsUpdated == true)
         {
             statsUpdated = false;
@@ -16,8 +17,10 @@ public class PlayerPickupRange : Weapon
         }
     }
 
+    // Upgrade pickup range method.
     public void UpgradePickupRange()
     {
+        // Call PlayerController to level up pickup range.
         PlayerController.instance.PickupRangeLevelUp();
     }
 }
