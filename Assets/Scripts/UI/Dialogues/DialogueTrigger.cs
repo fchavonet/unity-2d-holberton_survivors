@@ -3,29 +3,33 @@ using TMPro;
 
 public class DialogueTrigger : MonoBehaviour
 {
+    // The dialogue to be triggered
     public Dialogue dialogue;
-    //public GameObject interactUI;
 
+    // Boolean to track if the player is in range
     public bool isInRange;
 
+    // Called when another collider enters the trigger zone
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Check if the collider is the player
         if (collision.CompareTag("Player"))
         {
             isInRange = true;
-            //interactUI.SetActive(true);
         }
     }
 
+    // Called when another collider exits the trigger zone
     private void OnTriggerExit2D(Collider2D collision)
     {
+        // Check if the collider is the player
         if (collision.CompareTag("Player"))
         {
             isInRange = false;
-            //interactUI.SetActive(false);
         }
     }
 
+    // Trigger the dialogue to start
     public void TriggerDialogue()
     {
         DialogueManager.instance.StartDialogue(dialogue);
