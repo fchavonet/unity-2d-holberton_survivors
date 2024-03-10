@@ -94,6 +94,7 @@ public class BossController : MonoBehaviour
             LevelController.instance.IncrementEnemiesDefeated();
             Destroy(gameObject);
             Instantiate(deathEffect, transform.position,  Quaternion.identity);
+            CameraShake.instance.ShakeIt(1f, 0.2f);
         }
         // Display damage effect visually
         DamageController.instance.SpawnDamage(damageToTake, transform.position);
