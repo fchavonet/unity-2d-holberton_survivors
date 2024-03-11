@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3432332168211752008}
   - component: {fileID: 8053689058647794849}
   - component: {fileID: 1543845710360230558}
+  - component: {fileID: -3834377476905281449}
   m_Layer: 6
   m_Name: Ogre
   m_TagString: Enemy
@@ -122,14 +123,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody2d: {fileID: 8053689058647794849}
   spriteRenderer: {fileID: 7816144065435420582}
-  health: 300
+  health: 1000
   moveSpeed: 2.5
   damage: 50
   hitWaitTime: 0.5
   knockBackTime: 0.5
   experienceToGive: 1000
   coinDropRate: 1
-  chestDropRate: 0.001
+--- !u!114 &-3834377476905281449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609843814393310769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74d5369d0b39a1b408a2939070b4a98f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathEffect: {fileID: 4925807420024824091, guid: dace71131325fac4bad6bed148f3e1ee, type: 3}
 --- !u!1 &4082060519353995332
 GameObject:
   m_ObjectHideFlags: 0
