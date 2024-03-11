@@ -24,13 +24,19 @@ public class BonusLevelCrossfade : MonoBehaviour
         if (other.CompareTag("Stairs"))
         {
             // Initiate crossfade to the next level.
-            NextLevelCrossfade();
+            StartCoroutine(NextLevelSequence());
         }
     }
 
     // Initiate crossfade to the next level.
-    public void NextLevelCrossfade()
+    IEnumerator NextLevelSequence()
     {
+        // Set player scale to initial scale
+        PlayerController.instance.transform.localScale = Vector3.one;
+        
+        // Trigger scale down
+        yield return StartCoroutine(ScaleDownPlayer());
+
         // Load the next level.
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 2));
         // Fade out music.
@@ -72,5 +78,20 @@ public class BonusLevelCrossfade : MonoBehaviour
 
         // Stop the music.
         audioSource.Stop();
+    }
+
+    // Coroutine to scale down the player.
+    IEnumerator ScaleDownPlayer()
+    {
+        Vector3 targetScale = new Vector3(0.5f, 0.5f, 1f);
+        float scaleSpeed = 1f; // Adjust as needed
+
+        while (PlayerController.instance.transform.localScale.x > targetScale.x)
+        {
+            PlayerController.instance.transform.localScale -= new Vector3(scaleSpeed, scaleSpeed, 0f) * Time.deltaTime;
+            yield return null;
+        }
+
+        PlayerController.instance.transform.localScale = targetScale;
     }
 }
