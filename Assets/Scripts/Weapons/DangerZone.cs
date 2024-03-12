@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class DangerZone : Weapon
 {
+    public static DangerZone instance;
+
     [Space(10)]
     // Damager component reference.
     public EnemyDamager damager;
@@ -10,6 +12,13 @@ public class DangerZone : Weapon
     private float spawnTime;
     // Counter for spawning damagers.
     private float spawnCounter;
+
+    public int dangerZoneLevel;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
@@ -37,6 +46,8 @@ public class DangerZone : Weapon
             // Spawn damager.
             Instantiate(damager, damager.transform.position, Quaternion.identity, transform).gameObject.SetActive(true);
         }
+        
+        dangerZoneLevel = weaponLevel;
     }
 
     // Update weapon stats.

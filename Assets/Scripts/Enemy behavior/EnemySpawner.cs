@@ -75,6 +75,8 @@ public class EnemySpawner : MonoBehaviour
                     spawnCounter = waves[currentWave].timeBetweenSpawns;
 
                     GameObject newEnemy = Instantiate(waves[currentWave].enemyToSpawn, SelectSpawnPoint(), Quaternion.identity);
+                    
+                    UIController.instance.IncrementEnemiesSpawned();
 
                     // Add the spawned enemy to the list
                     spawnedEnemies.Add(newEnemy);

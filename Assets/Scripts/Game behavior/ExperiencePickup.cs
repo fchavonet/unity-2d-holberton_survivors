@@ -77,6 +77,8 @@ public class ExperiencePickup : MonoBehaviour
 
             // Destroy the pickup
             Destroy(gameObject);
+
+            UIController.instance.IncrementCoinsCollected();
         }
     }
 }

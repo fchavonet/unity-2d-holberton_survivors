@@ -31,11 +31,28 @@ public class UIController : MonoBehaviour
     public GameObject pauseScreen;
     public GameObject defaultSelectedButton;
 
+    [Space(10)]
     // UI elements for displaying statistics
-    public TMP_Text enemiesDefeatedCount;
-    public TMP_Text totalDamageReceivedCount;
     public TMP_Text totalPlayerDistance;
+    public TMP_Text totalDamageReceived;
+    public TMP_Text totalEnemiesSpawned;
+    public TMP_Text totalEnemiesDefeated;
+    public TMP_Text totalCoinsCollected;
 
+    [Space(10)]
+    public int enemiesSpawned;
+    public int enemiesDefeated;
+    public int coinsCollected;
+
+    [Space(10)]
+    public TMP_Text daggerLevel;
+    public TMP_Text dangerZoneLevel;
+    public TMP_Text doubleAxeLevel;
+    public TMP_Text fireballLevel;
+    public TMP_Text lightningLevel;
+    public TMP_Text orbitingShurikenLevel;
+
+    [Space(10)]
     // UI elements for displaying time
     public TMP_Text timeText;
 
@@ -53,9 +70,36 @@ public class UIController : MonoBehaviour
     // Update statistics panel with current values
     private void Update()
     {
-        enemiesDefeatedCount.text = "ENEMIES DEFEATED: " + LevelController.instance.enemiesDefeated.ToString("000000");
-        totalDamageReceivedCount.text = "DAMAGE RECEIVED: " + PlayerHealthController.instance.totalDamage.ToString("000000");
         totalPlayerDistance.text = "PLAYER DISTANCE: " + PlayerController.instance.playerDistance.ToString("000000");
+        totalDamageReceived.text = "DAMAGE RECEIVED: " + PlayerHealthController.instance.totalDamage.ToString("000000");
+        totalEnemiesSpawned.text = "ENEMIES SPAWNED: " + enemiesSpawned.ToString("000000");
+        totalEnemiesDefeated.text = "ENEMIES DEFEATED: " + enemiesDefeated.ToString("000000");
+        totalCoinsCollected.text = "COINS COLLECTED: " + coinsCollected.ToString("000000");
+
+        if (Dagger.instance != null && Dagger.instance.gameObject.activeSelf)
+        {
+            daggerLevel.text = "DAGGER LEVEL " + (Dagger.instance.daggerLevel + 1) + "/15";
+        }
+        if (DangerZone.instance != null && DangerZone.instance.gameObject.activeSelf)
+        {
+            dangerZoneLevel.text = "DANGER ZONE LEVEL " + (DangerZone.instance.dangerZoneLevel + 1) + "/15";
+        }
+        if (DoubleAxe.instance != null && DoubleAxe.instance.gameObject.activeSelf)
+        {
+            doubleAxeLevel.text = "DOUBLE AXE LEVEL " + (DoubleAxe.instance.doubleAxeLevel + 1) + "/15";
+        }
+        if (Fireball.instance != null && Fireball.instance.gameObject.activeSelf)
+        {
+            fireballLevel.text = "FIREBALL LEVEL " + (Fireball.instance.fireballLevel + 1) + "/15";
+        }
+        if (Lightning.instance != null && Lightning.instance.gameObject.activeSelf)
+        {
+            lightningLevel.text = "LIGHTNING LEVEL " + (Lightning.instance.lightningLevel + 1) + "/15";
+        }
+        if (OrbitingShuriken.instance != null && OrbitingShuriken.instance.gameObject.activeSelf)
+        {
+            orbitingShurikenLevel.text = "SHURIKEN LEVEL " + (OrbitingShuriken.instance.orbitingShurikenLevel + 1) + "/15";
+        }
     }
 
     // Method called when the pause button is pressed
@@ -72,13 +116,13 @@ public class UIController : MonoBehaviour
     // Method to toggle display of statistics panel
     public void OnDisplayStatistics()
     {
-         if (statisticsPanel.activeSelf == false)
+        if (statisticsPanel.activeSelf == false)
         {
-            statisticsPanel.SetActive(true);   
+            statisticsPanel.SetActive(true);
         }
         else
         {
-            statisticsPanel.SetActive(false); 
+            statisticsPanel.SetActive(false);
         }
     }
 
@@ -149,5 +193,21 @@ public class UIController : MonoBehaviour
         float seconds = Mathf.FloorToInt(time % 60);
 
         timeText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
+    }
+
+    public void IncrementEnemiesSpawned()
+    {
+        enemiesSpawned++;
+    }
+
+    // Method to increment the count of enemies defeated by the player
+    public void IncrementEnemiesDefeated()
+    {
+        enemiesDefeated++;
+    }
+
+    public void IncrementCoinsCollected()
+    {
+        coinsCollected++;
     }
 }

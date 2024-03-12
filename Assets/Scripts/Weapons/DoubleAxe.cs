@@ -2,12 +2,21 @@ using UnityEngine;
 
 public class DoubleAxe : Weapon
 {
+    public static DoubleAxe instance;
+
     [Space(10)]
     // Damager component reference.
     public EnemyDamager damager;
 
     // Counter for throwing attacks.
     private float throwCounter;
+
+    public int doubleAxeLevel;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
@@ -43,6 +52,8 @@ public class DoubleAxe : Weapon
                 SFXManager.instance.PlaySFXPitched(4);
             }
         }
+        
+        doubleAxeLevel = weaponLevel;
     }
 
     // Update weapon stats.

@@ -18,6 +18,10 @@ public class BonusLevelCrossfade : MonoBehaviour
     // Duration for fading out music.
     public float musicFadeOutTime = 1f;
 
+    [Space(10)]
+    // Reference to the SpriteRenderer of the player.
+    public SpriteRenderer playerSpriteRenderer;
+
     // Check for trigger collision.
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -34,7 +38,7 @@ public class BonusLevelCrossfade : MonoBehaviour
         // Set player scale to initial scale
         PlayerController.instance.transform.localScale = Vector3.one;
         
-        // Trigger scale down
+        // Trigger scale down with fade out.
         yield return StartCoroutine(ScaleDownPlayer());
 
         // Load the next level.
@@ -80,18 +84,30 @@ public class BonusLevelCrossfade : MonoBehaviour
         audioSource.Stop();
     }
 
-    // Coroutine to scale down the player.
+    // Coroutine to scale down the player with fade out.
     IEnumerator ScaleDownPlayer()
     {
         Vector3 targetScale = new Vector3(0.5f, 0.5f, 1f);
         float scaleSpeed = 1f; // Adjust as needed
+        float fadeOutDuration = 1f; // Adjust as needed
+        Color originalColor = playerSpriteRenderer.color;
+        float initialAlpha = originalColor.a;
+        float fadeOutStartTime = Time.time; // Start time for fade out
 
-        while (PlayerController.instance.transform.localScale.x > targetScale.x)
+        while (PlayerController.instance.transform.localScale.x > targetScale.x || playerSpriteRenderer.color.a > 0)
         {
+            // Scale down the player
             PlayerController.instance.transform.localScale -= new Vector3(scaleSpeed, scaleSpeed, 0f) * Time.deltaTime;
+
+            // Calculate alpha value for fading out
+            float newAlpha = Mathf.Lerp(initialAlpha, 0f, Mathf.Clamp01((Time.time - fadeOutStartTime) / fadeOutDuration));
+            playerSpriteRenderer.color = new Color(originalColor.r, originalColor.g, originalColor.b, newAlpha);
+
             yield return null;
         }
 
+        // Ensure the player is properly scaled and faded out
         PlayerController.instance.transform.localScale = targetScale;
+        playerSpriteRenderer.color = new Color(originalColor.r, originalColor.g, originalColor.b, 0f);
     }
 }

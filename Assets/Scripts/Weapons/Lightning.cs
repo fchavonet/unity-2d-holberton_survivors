@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Lightning : Weapon
 {
+    public static Lightning instance;
+
     [Space(10)]
     // Damager component reference.
     public EnemyDamager damager;
@@ -18,6 +20,13 @@ public class Lightning : Weapon
 
     // Counter for timing attacks.
     private float shotCounter;
+
+    public int lightningLevel;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
@@ -63,6 +72,8 @@ public class Lightning : Weapon
                 CameraShake.instance.ShakeIt(0.1f, 0.2f);
             }
         }
+        
+        lightningLevel = weaponLevel;
     }
 
     // Update weapon stats.

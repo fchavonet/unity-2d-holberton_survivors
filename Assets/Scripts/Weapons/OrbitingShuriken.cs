@@ -1,7 +1,10 @@
+using System.Net.NetworkInformation;
 using UnityEngine;
 
 public class OrbitingShuriken : Weapon
 {
+    public static OrbitingShuriken instance;
+
     [Space(10)]
     // Reference to the enemy damager.
     public EnemyDamager damager;
@@ -18,6 +21,13 @@ public class OrbitingShuriken : Weapon
 
     // Counter for spawn timing.
     private float spawnCounter;
+
+    public int orbitingShurikenLevel;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
@@ -56,6 +66,8 @@ public class OrbitingShuriken : Weapon
             // Update the weapon stats.
             SetStats();
         }
+
+        orbitingShurikenLevel = weaponLevel;
     }
 
     // Update weapon stats.

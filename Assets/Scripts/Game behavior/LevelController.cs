@@ -156,10 +156,4 @@ public class LevelController : MonoBehaviour
             }
         }
     }
-
-    // Method to increment the count of enemies defeated by the player
-    public void IncrementEnemiesDefeated()
-    {
-        enemiesDefeated++;
-    }
 }

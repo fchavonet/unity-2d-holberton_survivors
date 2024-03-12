@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Fireball : Weapon
 {
+    public static Fireball instance;
+
     [Space(10)]
     // Damager component reference.
     public EnemyDamager damager;
@@ -18,6 +20,13 @@ public class Fireball : Weapon
 
     // Counter for timing attacks.
     private float shotCounter;
+
+    public int fireballLevel;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
@@ -66,6 +75,8 @@ public class Fireball : Weapon
                 SFXManager.instance.PlaySFXPitched(5);
             }
         }
+
+        fireballLevel = weaponLevel;
     }
 
     // Update weapon stats.

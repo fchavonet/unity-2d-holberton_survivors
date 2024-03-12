@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Dagger : Weapon
 {
+    public static Dagger instance;
+
     [Space(10)]
     // Damager component reference.
     public EnemyDamager damager;
@@ -18,6 +20,13 @@ public class Dagger : Weapon
 
     // Counter for timing attacks.
     private float shotCounter;
+
+    public int daggerLevel;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
@@ -65,7 +74,10 @@ public class Dagger : Weapon
                 // Play attack sound effect.
                 SFXManager.instance.PlaySFXPitched(2);
             }
+
         }
+        
+        daggerLevel = weaponLevel;
     }
 
     // Update weapon stats.

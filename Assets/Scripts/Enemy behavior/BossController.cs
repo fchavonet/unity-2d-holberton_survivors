@@ -91,8 +91,8 @@ public class BossController : MonoBehaviour
         // Check for boss death and handle accordingly
         if (health <= 0)
         {
-            LevelController.instance.IncrementEnemiesDefeated();
             Destroy(gameObject);
+            UIController.instance.IncrementEnemiesDefeated();
             Instantiate(deathEffect, transform.position,  Quaternion.identity);
             CameraShake.instance.ShakeIt(1f, 0.2f);
         }

@@ -33,6 +33,8 @@ public class EnemyController : MonoBehaviour
     // The target the enemy will pursue
     private Transform target;
 
+    private bool isDefeated = false;
+
     void Start()
     {
         // Find the player in the scene and set it as the target
@@ -87,7 +89,7 @@ public class EnemyController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-         // Damage the player on collision
+        // Damage the player on collision
         if (collision.gameObject.tag == "Player" && hitCounter <= 0f)
         {
             PlayerHealthController.instance.TakeDamage(damage);
@@ -99,19 +101,26 @@ public class EnemyController : MonoBehaviour
 
     public void TakeDamage(float damageToTake)
     {
-        // Reduce health by the amount of damage taken
+        // Si l'ennemi a déjà été vaincu, ne faites rien
+        if (isDefeated)
+            return;
+
+        // Réduire la santé de l'ennemi
         health -= damageToTake;
 
-        // Check if health drops below zero and handle enemy death
+        // Vérifier si la santé tombe en dessous de zéro et gérer la mort de l'ennemi
         if (health <= 0)
         {
-            // Remove enemy from the game
+            // Marquer l'ennemi comme vaincu
+            isDefeated = true;
+
+            // Supprimer l'ennemi du jeu
             Destroy(gameObject);
 
-            // Increment the enemies defeated count
-            LevelController.instance.IncrementEnemiesDefeated();
+            // Incrémenter le compteur d'ennemis vaincus
+            UIController.instance.IncrementEnemiesDefeated();
 
-            // Determine whether to drop a coin or a chest based on probability
+            // Déterminer si l'ennemi doit laisser tomber une pièce ou un coffre en fonction de la probabilité
             float random = Random.value;
 
             if (random <= coinDropRate && random > chestDropRate)
@@ -124,7 +133,7 @@ public class EnemyController : MonoBehaviour
             }
         }
 
-        // Display damage effect visually
+        // Afficher visuellement l'effet de dégâts
         DamageController.instance.SpawnDamage(damageToTake, transform.position);
     }
 
