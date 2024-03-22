@@ -41,6 +41,10 @@ It's important to highlight that Holberton Survivors is a non-profit initiative,
 
 Furthermore, to produce this project, we have utilized free-to-use assets such as graphics and music. Despite the extraordinary quality of these assets, for which we extend our gratitude to <a href="https://0x72.itch.io/dungeontileset-ii" target="_blank">Robert Norenberg</a> for distributing such a generous pack, they are not unique. If we were to develop a game for commercial purposes, we would undoubtedly collaborate with a graphic designers to craft a distinct and immersive ambiance.
 
+<p align="center">
+    <img src="./resources/images/screenshots.png" alt="Screenshots">
+</p>
+
 ## 🔨 <span id="tech-stack">Tech stack</span>
 
 <p align="left">
