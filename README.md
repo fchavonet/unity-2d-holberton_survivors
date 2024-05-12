@@ -1,6 +1,4 @@
-<img  height="50px" align="right" src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Official_unity_logo.png" alt="Unity logotype">
-
-# Unity - 2D - Holberton Survivors
+# Unity - 2D - Holberton Survivors <img  height="50px" align="right" src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Official_unity_logo.png" alt="Unity logotype">
 
 ## 🔖 Table of contents
 
